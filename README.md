@@ -112,7 +112,7 @@ Combined all analytical views into a single Tableau dashboard covering revenue c
 
 ## Dashboard Overview
 
-!\[Tableau Dashboard](Images/tableau\_dashboard.png)
+![Tableau Dashboard](Images/tableau\_dashboard.png)
 
 The Tableau Public dashboard integrates four analytical views into a single business decision layer: revenue concentration, monetization efficiency, delayed monetization behavior, and campaign strategic segmentation. Designed for portfolio-level review and prioritization.
 
