@@ -1,0 +1,592 @@
+campaign_rank,campaign,total_payments,total_ltv,revenue_share_pct,cumulative_revenue_share_pct,pareto_segment
+1,campaign_151,186,6248.97,2.84,2.84,Top revenue concentration
+2,campaign_432,176,4706.71,2.14,4.99,Top revenue concentration
+3,campaign_149,150,4163.01,1.89,6.88,Top revenue concentration
+4,campaign_38,194,2827.56,1.29,8.17,Top revenue concentration
+5,campaign_202,168,2563.18,1.17,9.33,Top revenue concentration
+6,campaign_436,62,2317.84,1.05,10.39,Top revenue concentration
+7,campaign_35,121,2251.14,1.02,11.41,Top revenue concentration
+8,campaign_285,123,2188.84,1.00,12.41,Top revenue concentration
+9,campaign_369,190,2163.33,0.98,13.39,Top revenue concentration
+10,campaign_207,160,2073.67,0.94,14.34,Top revenue concentration
+11,campaign_71,124,2004.46,0.91,15.25,Top revenue concentration
+12,campaign_138,111,1987.46,0.90,16.15,Top revenue concentration
+13,campaign_545,67,1962.90,0.89,17.05,Top revenue concentration
+14,campaign_357,130,1934.04,0.88,17.93,Top revenue concentration
+15,campaign_84,38,1896.32,0.86,18.79,Top revenue concentration
+16,campaign_195,112,1863.50,0.85,19.64,Top revenue concentration
+17,campaign_192,106,1848.11,0.84,20.48,Top revenue concentration
+18,campaign_156,115,1698.88,0.77,21.25,Top revenue concentration
+19,campaign_60,98,1602.22,0.73,21.98,Top revenue concentration
+20,campaign_190,85,1572.14,0.72,22.70,Top revenue concentration
+21,campaign_191,97,1465.27,0.67,23.36,Top revenue concentration
+22,campaign_196,159,1464.82,0.67,24.03,Top revenue concentration
+23,campaign_139,74,1456.56,0.66,24.69,Top revenue concentration
+24,campaign_136,122,1437.25,0.65,25.35,Top revenue concentration
+25,campaign_455,119,1404.08,0.64,25.99,Top revenue concentration
+26,campaign_140,131,1379.05,0.63,26.61,Top revenue concentration
+27,campaign_287,56,1341.38,0.61,27.22,Top revenue concentration
+28,campaign_456,112,1325.13,0.60,27.83,Top revenue concentration
+29,campaign_83,29,1324.76,0.60,28.43,Top revenue concentration
+30,campaign_388,38,1319.90,0.60,29.03,Top revenue concentration
+31,campaign_324,112,1278.20,0.58,29.61,Top revenue concentration
+32,campaign_203,154,1254.94,0.57,30.18,Top revenue concentration
+33,campaign_298,51,1252.40,0.57,30.75,Top revenue concentration
+34,campaign_53,55,1219.80,0.56,31.31,Top revenue concentration
+35,campaign_52,64,1175.84,0.54,31.84,Top revenue concentration
+36,campaign_446,97,1175.12,0.53,32.38,Top revenue concentration
+37,campaign_143,24,1164.32,0.53,32.91,Top revenue concentration
+38,campaign_204,112,1136.49,0.52,33.42,Top revenue concentration
+39,campaign_59,50,1134.13,0.52,33.94,Top revenue concentration
+40,campaign_570,31,1131.44,0.51,34.46,Top revenue concentration
+41,campaign_142,30,1121.34,0.51,34.97,Top revenue concentration
+42,campaign_565,57,1119.11,0.51,35.48,Top revenue concentration
+43,campaign_124,49,1116.12,0.51,35.98,Top revenue concentration
+44,campaign_125,27,1107.77,0.50,36.49,Top revenue concentration
+45,campaign_327,164,1081.89,0.49,36.98,Top revenue concentration
+46,campaign_561,40,1051.09,0.48,37.46,Top revenue concentration
+47,campaign_468,36,1048.52,0.48,37.93,Top revenue concentration
+48,campaign_141,24,1023.98,0.47,38.40,Top revenue concentration
+49,campaign_55,56,1012.02,0.46,38.86,Top revenue concentration
+50,campaign_144,25,999.95,0.46,39.32,Top revenue concentration
+51,campaign_201,101,952.63,0.43,39.75,Top revenue concentration
+52,campaign_284,41,949.55,0.43,40.18,Top revenue concentration
+53,campaign_74,76,927.90,0.42,40.60,Top revenue concentration
+54,campaign_452,76,907.69,0.41,41.02,Top revenue concentration
+55,campaign_459,83,903.97,0.41,41.43,Top revenue concentration
+56,campaign_148,41,899.45,0.41,41.84,Top revenue concentration
+57,campaign_553,34,882.32,0.40,42.24,Top revenue concentration
+58,campaign_44,59,881.73,0.40,42.64,Top revenue concentration
+59,campaign_276,19,879.42,0.40,43.04,Top revenue concentration
+60,campaign_551,33,876.56,0.40,43.44,Top revenue concentration
+61,campaign_116,30,873.95,0.40,43.84,Top revenue concentration
+62,campaign_103,66,858.19,0.39,44.23,Top revenue concentration
+63,campaign_336,140,852.25,0.39,44.62,Top revenue concentration
+64,campaign_193,53,840.39,0.38,45.00,Top revenue concentration
+65,campaign_130,21,836.50,0.38,45.38,Top revenue concentration
+66,campaign_563,31,830.99,0.38,45.76,Top revenue concentration
+67,campaign_564,21,814.47,0.37,46.13,Top revenue concentration
+68,campaign_451,26,804.26,0.37,46.49,Top revenue concentration
+69,campaign_137,51,801.36,0.36,46.86,Top revenue concentration
+70,campaign_467,50,798.72,0.36,47.22,Top revenue concentration
+71,campaign_272,40,776.18,0.35,47.58,Top revenue concentration
+72,campaign_364,76,770.60,0.35,47.93,Top revenue concentration
+73,campaign_123,40,761.46,0.35,48.27,Top revenue concentration
+74,campaign_189,35,759.21,0.35,48.62,Top revenue concentration
+75,campaign_186,108,755.51,0.34,48.96,Top revenue concentration
+76,campaign_554,33,737.90,0.34,49.30,Top revenue concentration
+77,campaign_378,31,736.06,0.33,49.63,Top revenue concentration
+78,campaign_281,41,734.88,0.33,49.97,Top revenue concentration
+79,campaign_454,51,728.08,0.33,50.30,Top revenue concentration
+80,campaign_371,28,727.20,0.33,50.63,Top revenue concentration
+81,campaign_437,38,708.56,0.32,50.95,Top revenue concentration
+82,campaign_152,22,707.34,0.32,51.27,Top revenue concentration
+83,campaign_557,31,702.92,0.32,51.59,Top revenue concentration
+84,campaign_433,13,692.21,0.32,51.91,Top revenue concentration
+85,campaign_63,44,684.71,0.31,52.22,Top revenue concentration
+86,campaign_199,60,683.84,0.31,52.53,Top revenue concentration
+87,campaign_321,54,682.77,0.31,52.84,Top revenue concentration
+88,campaign_87,157,666.64,0.30,53.15,Top revenue concentration
+89,campaign_28,29,665.77,0.30,53.45,Top revenue concentration
+90,campaign_104,11,659.47,0.30,53.75,Top revenue concentration
+91,campaign_100,17,654.87,0.30,54.05,Top revenue concentration
+92,campaign_224,42,653.75,0.30,54.34,Top revenue concentration
+93,campaign_30,35,650.25,0.30,54.64,Top revenue concentration
+94,campaign_42,48,646.76,0.29,54.93,Top revenue concentration
+95,campaign_95,50,646.26,0.29,55.23,Top revenue concentration
+96,campaign_345,29,645.46,0.29,55.52,Top revenue concentration
+97,campaign_522,26,642.90,0.29,55.81,Top revenue concentration
+98,campaign_315,48,637.81,0.29,56.10,Top revenue concentration
+99,campaign_314,36,632.62,0.29,56.39,Top revenue concentration
+100,campaign_37,54,622.04,0.28,56.68,Top revenue concentration
+101,campaign_173,52,610.37,0.28,56.95,Top revenue concentration
+102,campaign_346,37,608.89,0.28,57.23,Top revenue concentration
+103,campaign_524,22,607.26,0.28,57.51,Top revenue concentration
+104,campaign_7,29,606.72,0.28,57.78,Top revenue concentration
+105,campaign_78,38,599.96,0.27,58.06,Top revenue concentration
+106,campaign_384,49,586.50,0.27,58.32,Top revenue concentration
+107,campaign_366,30,583.14,0.27,58.59,Top revenue concentration
+108,campaign_216,71,571.56,0.26,58.85,Top revenue concentration
+109,campaign_99,45,570.69,0.26,59.11,Top revenue concentration
+110,campaign_91,29,570.42,0.26,59.37,Top revenue concentration
+111,campaign_361,31,556.07,0.25,59.62,Top revenue concentration
+112,campaign_306,41,549.57,0.25,59.87,Top revenue concentration
+113,campaign_111,34,549.11,0.25,60.12,Top revenue concentration
+114,campaign_449,29,545.88,0.25,60.37,Top revenue concentration
+115,campaign_187,32,535.67,0.24,60.61,Top revenue concentration
+116,campaign_41,49,525.52,0.24,60.85,Top revenue concentration
+117,campaign_289,20,525.25,0.24,61.09,Top revenue concentration
+118,campaign_316,24,521.95,0.24,61.33,Top revenue concentration
+119,campaign_198,26,521.07,0.24,61.57,Top revenue concentration
+120,campaign_450,38,518.54,0.24,61.80,Top revenue concentration
+121,campaign_122,27,513.34,0.23,62.04,Top revenue concentration
+122,campaign_180,22,508.73,0.23,62.27,Top revenue concentration
+123,campaign_194,29,507.08,0.23,62.50,Top revenue concentration
+124,campaign_5,25,505.93,0.23,62.73,Top revenue concentration
+125,campaign_131,12,503.23,0.23,62.96,Top revenue concentration
+126,campaign_4,12,502.68,0.23,63.19,Top revenue concentration
+127,campaign_271,56,497.58,0.23,63.41,Top revenue concentration
+128,campaign_160,21,496.03,0.23,63.64,Top revenue concentration
+129,campaign_566,20,493.17,0.22,63.86,Top revenue concentration
+130,campaign_257,19,490.70,0.22,64.09,Top revenue concentration
+131,campaign_165,30,490.14,0.22,64.31,Top revenue concentration
+132,campaign_354,30,488.35,0.22,64.53,Top revenue concentration
+133,campaign_311,63,485.00,0.22,64.75,Top revenue concentration
+134,campaign_359,45,476.64,0.22,64.97,Top revenue concentration
+135,campaign_568,24,476.26,0.22,65.19,Top revenue concentration
+136,campaign_462,38,470.99,0.21,65.40,Top revenue concentration
+137,campaign_109,42,470.27,0.21,65.61,Top revenue concentration
+138,campaign_331,22,467.69,0.21,65.83,Top revenue concentration
+139,campaign_150,17,467.08,0.21,66.04,Top revenue concentration
+140,campaign_259,22,466.36,0.21,66.25,Top revenue concentration
+141,campaign_291,16,466.01,0.21,66.46,Top revenue concentration
+142,campaign_155,20,465.00,0.21,66.67,Top revenue concentration
+143,campaign_101,20,462.37,0.21,66.89,Top revenue concentration
+144,campaign_161,30,461.87,0.21,67.10,Top revenue concentration
+145,campaign_273,16,459.82,0.21,67.30,Top revenue concentration
+146,campaign_353,50,456.32,0.21,67.51,Top revenue concentration
+147,campaign_118,74,453.32,0.21,67.72,Top revenue concentration
+148,campaign_23,66,451.75,0.21,67.92,Top revenue concentration
+149,campaign_2,9,446.54,0.20,68.13,Top revenue concentration
+150,campaign_182,46,440.83,0.20,68.33,Top revenue concentration
+151,campaign_350,32,440.19,0.20,68.53,Top revenue concentration
+152,campaign_382,39,435.71,0.20,68.73,Top revenue concentration
+153,campaign_107,25,430.77,0.20,68.92,Top revenue concentration
+154,campaign_185,27,430.13,0.20,69.12,Top revenue concentration
+155,campaign_106,53,430.02,0.20,69.31,Top revenue concentration
+156,campaign_174,31,425.12,0.19,69.51,Top revenue concentration
+157,campaign_334,54,423.23,0.19,69.70,Top revenue concentration
+158,campaign_302,60,421.11,0.19,69.89,Top revenue concentration
+159,campaign_418,28,415.92,0.19,70.08,Top revenue concentration
+160,campaign_555,11,415.19,0.19,70.27,Top revenue concentration
+161,campaign_222,18,412.17,0.19,70.46,Top revenue concentration
+162,campaign_498,86,411.68,0.19,70.64,Top revenue concentration
+163,campaign_132,13,407.82,0.19,70.83,Top revenue concentration
+164,campaign_453,106,401.68,0.18,71.01,Top revenue concentration
+165,campaign_90,13,397.20,0.18,71.19,Top revenue concentration
+166,campaign_166,21,382.03,0.17,71.37,Top revenue concentration
+167,campaign_407,64,374.41,0.17,71.54,Top revenue concentration
+168,campaign_102,24,368.66,0.17,71.71,Top revenue concentration
+169,campaign_325,15,368.25,0.17,71.87,Top revenue concentration
+170,campaign_358,39,367.81,0.17,72.04,Top revenue concentration
+171,campaign_62,49,367.39,0.17,72.21,Top revenue concentration
+172,campaign_466,5,366.00,0.17,72.37,Top revenue concentration
+173,campaign_318,20,359.13,0.16,72.54,Top revenue concentration
+174,campaign_16,36,358.19,0.16,72.70,Top revenue concentration
+175,campaign_279,18,357.02,0.16,72.86,Top revenue concentration
+176,campaign_112,17,356.47,0.16,73.03,Top revenue concentration
+177,campaign_560,18,356.31,0.16,73.19,Top revenue concentration
+178,campaign_495,13,352.85,0.16,73.35,Top revenue concentration
+179,campaign_530,26,348.97,0.16,73.51,Top revenue concentration
+180,campaign_176,21,348.74,0.16,73.67,Top revenue concentration
+181,campaign_286,20,345.27,0.16,73.82,Top revenue concentration
+182,campaign_478,7,344.44,0.16,73.98,Top revenue concentration
+183,campaign_200,13,342.90,0.16,74.14,Top revenue concentration
+184,campaign_171,62,342.83,0.16,74.29,Top revenue concentration
+185,campaign_126,13,341.03,0.16,74.45,Top revenue concentration
+186,campaign_489,27,339.66,0.15,74.60,Top revenue concentration
+187,campaign_49,8,338.25,0.15,74.76,Top revenue concentration
+188,campaign_263,17,333.94,0.15,74.91,Top revenue concentration
+189,campaign_258,34,332.92,0.15,75.06,Top revenue concentration
+190,campaign_154,14,332.24,0.15,75.21,Top revenue concentration
+191,campaign_27,20,332.05,0.15,75.36,Top revenue concentration
+192,campaign_220,19,331.93,0.15,75.51,Top revenue concentration
+193,campaign_368,16,331.72,0.15,75.66,Top revenue concentration
+194,campaign_205,20,331.60,0.15,75.81,Top revenue concentration
+195,campaign_170,39,328.01,0.15,75.96,Top revenue concentration
+196,campaign_19,58,322.53,0.15,76.11,Top revenue concentration
+197,campaign_108,20,321.44,0.15,76.26,Top revenue concentration
+198,campaign_387,6,320.52,0.15,76.40,Top revenue concentration
+199,campaign_45,12,319.26,0.15,76.55,Top revenue concentration
+200,campaign_29,7,318.85,0.15,76.69,Top revenue concentration
+201,campaign_24,99,316.22,0.14,76.84,Top revenue concentration
+202,campaign_479,25,311.94,0.14,76.98,Top revenue concentration
+203,campaign_332,53,310.40,0.14,77.12,Top revenue concentration
+204,campaign_188,13,306.46,0.14,77.26,Top revenue concentration
+205,campaign_475,22,305.65,0.14,77.40,Top revenue concentration
+206,campaign_589,29,304.58,0.14,77.54,Top revenue concentration
+207,campaign_496,38,298.67,0.14,77.67,Top revenue concentration
+208,campaign_415,27,298.53,0.14,77.81,Top revenue concentration
+209,campaign_419,67,298.20,0.14,77.94,Top revenue concentration
+210,campaign_414,25,297.56,0.14,78.08,Top revenue concentration
+211,campaign_145,8,297.38,0.14,78.22,Top revenue concentration
+212,campaign_167,6,294.91,0.13,78.35,Top revenue concentration
+213,campaign_528,19,293.30,0.13,78.48,Top revenue concentration
+214,campaign_401,31,292.98,0.13,78.62,Top revenue concentration
+215,campaign_77,25,290.93,0.13,78.75,Top revenue concentration
+216,campaign_562,4,290.15,0.13,78.88,Top revenue concentration
+217,campaign_120,22,289.63,0.13,79.01,Top revenue concentration
+218,campaign_209,4,289.36,0.13,79.14,Top revenue concentration
+219,campaign_525,25,289.03,0.13,79.28,Top revenue concentration
+220,campaign_425,90,287.64,0.13,79.41,Top revenue concentration
+221,campaign_483,27,285.56,0.13,79.54,Top revenue concentration
+222,campaign_153,13,284.10,0.13,79.67,Top revenue concentration
+223,campaign_584,9,281.99,0.13,79.79,Top revenue concentration
+224,campaign_127,12,278.48,0.13,79.92,Top revenue concentration
+225,campaign_110,5,278.30,0.13,80.05,Long tail
+226,campaign_296,7,277.99,0.13,80.17,Long tail
+227,campaign_558,8,276.54,0.13,80.30,Long tail
+228,campaign_117,8,275.49,0.13,80.43,Long tail
+229,campaign_183,10,274.15,0.12,80.55,Long tail
+230,campaign_3,9,270.25,0.12,80.67,Long tail
+231,campaign_82,6,268.72,0.12,80.80,Long tail
+232,campaign_569,5,267.79,0.12,80.92,Long tail
+233,campaign_573,4,266.62,0.12,81.04,Long tail
+234,campaign_422,10,263.00,0.12,81.16,Long tail
+235,campaign_164,8,262.82,0.12,81.28,Long tail
+236,campaign_309,28,261.28,0.12,81.40,Long tail
+237,campaign_542,8,260.30,0.12,81.52,Long tail
+238,campaign_409,10,259.64,0.12,81.63,Long tail
+239,campaign_380,4,259.27,0.12,81.75,Long tail
+240,campaign_307,5,258.51,0.12,81.87,Long tail
+241,campaign_295,11,256.27,0.12,81.99,Long tail
+242,campaign_128,6,256.08,0.12,82.10,Long tail
+243,campaign_80,34,255.20,0.12,82.22,Long tail
+244,campaign_76,43,255.17,0.12,82.33,Long tail
+245,campaign_320,10,253.79,0.12,82.45,Long tail
+246,campaign_338,30,251.40,0.11,82.56,Long tail
+247,campaign_54,27,248.46,0.11,82.68,Long tail
+248,campaign_430,15,248.10,0.11,82.79,Long tail
+249,campaign_36,12,247.02,0.11,82.90,Long tail
+250,campaign_526,27,243.44,0.11,83.01,Long tail
+251,campaign_310,5,243.17,0.11,83.12,Long tail
+252,campaign_383,4,240.36,0.11,83.23,Long tail
+253,campaign_480,24,240.14,0.11,83.34,Long tail
+254,campaign_21,28,239.95,0.11,83.45,Long tail
+255,campaign_405,22,239.08,0.11,83.56,Long tail
+256,campaign_34,4,238.40,0.11,83.67,Long tail
+257,campaign_460,18,238.30,0.11,83.78,Long tail
+258,campaign_585,11,235.89,0.11,83.88,Long tail
+259,campaign_527,24,235.80,0.11,83.99,Long tail
+260,campaign_58,10,235.16,0.11,84.10,Long tail
+261,campaign_404,10,234.55,0.11,84.21,Long tail
+262,campaign_523,6,234.26,0.11,84.31,Long tail
+263,campaign_92,9,234.20,0.11,84.42,Long tail
+264,campaign_47,2,233.78,0.11,84.53,Long tail
+265,campaign_440,3,233.39,0.11,84.63,Long tail
+266,campaign_184,24,231.92,0.11,84.74,Long tail
+267,campaign_70,20,229.20,0.10,84.84,Long tail
+268,campaign_505,177,225.39,0.10,84.94,Long tail
+269,campaign_179,30,225.34,0.10,85.05,Long tail
+270,campaign_81,24,224.04,0.10,85.15,Long tail
+271,campaign_416,28,222.75,0.10,85.25,Long tail
+272,campaign_412,28,221.57,0.10,85.35,Long tail
+273,campaign_434,8,221.57,0.10,85.45,Long tail
+274,campaign_65,13,220.88,0.10,85.55,Long tail
+275,campaign_579,6,218.93,0.10,85.65,Long tail
+276,campaign_242,54,218.44,0.10,85.75,Long tail
+277,campaign_539,10,218.41,0.10,85.85,Long tail
+278,campaign_219,7,217.78,0.10,85.95,Long tail
+279,campaign_211,4,214.65,0.10,86.05,Long tail
+280,campaign_8,9,213.06,0.10,86.14,Long tail
+281,campaign_121,32,212.85,0.10,86.24,Long tail
+282,campaign_283,6,212.14,0.10,86.34,Long tail
+283,campaign_1,10,211.67,0.10,86.43,Long tail
+284,campaign_547,11,209.61,0.10,86.53,Long tail
+285,campaign_417,12,209.07,0.10,86.62,Long tail
+286,campaign_504,69,209.06,0.10,86.72,Long tail
+287,campaign_481,16,208.26,0.09,86.81,Long tail
+288,campaign_299,20,205.24,0.09,86.91,Long tail
+289,campaign_72,3,205.18,0.09,87.00,Long tail
+290,campaign_249,54,204.70,0.09,87.09,Long tail
+291,campaign_347,12,204.09,0.09,87.19,Long tail
+292,campaign_250,133,202.47,0.09,87.28,Long tail
+293,campaign_348,30,202.37,0.09,87.37,Long tail
+294,campaign_408,32,202.23,0.09,87.46,Long tail
+295,campaign_221,6,201.82,0.09,87.56,Long tail
+296,campaign_268,4,200.29,0.09,87.65,Long tail
+297,campaign_278,6,199.86,0.09,87.74,Long tail
+298,campaign_490,5,198.16,0.09,87.83,Long tail
+299,campaign_232,32,197.24,0.09,87.92,Long tail
+300,campaign_428,10,195.32,0.09,88.01,Long tail
+301,campaign_349,23,194.65,0.09,88.09,Long tail
+302,campaign_389,6,193.56,0.09,88.18,Long tail
+303,campaign_39,4,191.71,0.09,88.27,Long tail
+304,campaign_317,21,191.48,0.09,88.36,Long tail
+305,campaign_245,128,191.34,0.09,88.44,Long tail
+306,campaign_429,13,191.02,0.09,88.53,Long tail
+307,campaign_482,15,190.81,0.09,88.62,Long tail
+308,campaign_521,8,190.29,0.09,88.70,Long tail
+309,campaign_233,17,189.86,0.09,88.79,Long tail
+310,campaign_218,4,189.80,0.09,88.88,Long tail
+311,campaign_25,39,189.62,0.09,88.96,Long tail
+312,campaign_32,7,187.96,0.09,89.05,Long tail
+313,campaign_506,26,187.52,0.09,89.13,Long tail
+314,campaign_571,5,187.42,0.09,89.22,Long tail
+315,campaign_439,9,187.30,0.09,89.31,Long tail
+316,campaign_493,8,187.00,0.09,89.39,Long tail
+317,campaign_97,5,185.96,0.08,89.47,Long tail
+318,campaign_447,5,185.73,0.08,89.56,Long tail
+319,campaign_290,4,185.15,0.08,89.64,Long tail
+320,campaign_438,3,184.17,0.08,89.73,Long tail
+321,campaign_303,16,183.92,0.08,89.81,Long tail
+322,campaign_515,14,183.62,0.08,89.89,Long tail
+323,campaign_367,12,183.49,0.08,89.98,Long tail
+324,campaign_465,7,182.12,0.08,90.06,Long tail
+325,campaign_246,88,181.76,0.08,90.14,Long tail
+326,campaign_113,34,181.44,0.08,90.23,Long tail
+327,campaign_56,14,180.92,0.08,90.31,Long tail
+328,campaign_372,59,179.96,0.08,90.39,Long tail
+329,campaign_119,5,177.89,0.08,90.47,Long tail
+330,campaign_572,4,177.72,0.08,90.55,Long tail
+331,campaign_435,4,176.27,0.08,90.63,Long tail
+332,campaign_548,6,175.67,0.08,90.71,Long tail
+333,campaign_236,81,174.97,0.08,90.79,Long tail
+334,campaign_360,20,174.49,0.08,90.87,Long tail
+335,campaign_308,3,174.21,0.08,90.95,Long tail
+336,campaign_533,5,173.62,0.08,91.03,Long tail
+337,campaign_586,10,172.12,0.08,91.11,Long tail
+338,campaign_518,45,171.63,0.08,91.19,Long tail
+339,campaign_40,3,169.05,0.08,91.26,Long tail
+340,campaign_98,8,168.49,0.08,91.34,Long tail
+341,campaign_441,4,168.17,0.08,91.42,Long tail
+342,campaign_484,20,166.95,0.08,91.49,Long tail
+343,campaign_351,21,166.60,0.08,91.57,Long tail
+344,campaign_509,36,166.50,0.08,91.64,Long tail
+345,campaign_275,5,165.26,0.08,91.72,Long tail
+346,campaign_61,2,160.38,0.07,91.79,Long tail
+347,campaign_50,3,157.86,0.07,91.86,Long tail
+348,campaign_410,28,156.75,0.07,91.94,Long tail
+349,campaign_471,5,155.46,0.07,92.01,Long tail
+350,campaign_79,13,154.20,0.07,92.08,Long tail
+351,campaign_241,71,153.87,0.07,92.15,Long tail
+352,campaign_235,31,153.27,0.07,92.22,Long tail
+353,campaign_89,5,151.41,0.07,92.28,Long tail
+354,campaign_470,6,150.41,0.07,92.35,Long tail
+355,campaign_217,8,150.32,0.07,92.42,Long tail
+356,campaign_411,21,149.92,0.07,92.49,Long tail
+357,campaign_329,5,149.25,0.07,92.56,Long tail
+358,campaign_162,4,148.14,0.07,92.63,Long tail
+359,campaign_267,5,147.69,0.07,92.69,Long tail
+360,campaign_282,12,147.47,0.07,92.76,Long tail
+361,campaign_396,2,147.17,0.07,92.83,Long tail
+362,campaign_343,5,145.33,0.07,92.89,Long tail
+363,campaign_474,14,144.91,0.07,92.96,Long tail
+364,campaign_541,9,144.58,0.07,93.02,Long tail
+365,campaign_88,2,144.11,0.07,93.09,Long tail
+366,campaign_328,11,143.78,0.07,93.16,Long tail
+367,campaign_508,79,143.59,0.07,93.22,Long tail
+368,campaign_544,7,142.63,0.06,93.35,Long tail
+369,campaign_26,2,142.63,0.06,93.35,Long tail
+370,campaign_514,25,142.18,0.06,93.42,Long tail
+371,campaign_520,23,141.98,0.06,93.48,Long tail
+372,campaign_531,4,141.65,0.06,93.54,Long tail
+373,campaign_254,24,141.37,0.06,93.61,Long tail
+374,campaign_374,2,141.36,0.06,93.67,Long tail
+375,campaign_540,6,141.05,0.06,93.74,Long tail
+376,campaign_512,100,139.98,0.06,93.80,Long tail
+377,campaign_210,4,139.21,0.06,93.86,Long tail
+378,campaign_300,16,138.45,0.06,93.93,Long tail
+379,campaign_305,22,137.70,0.06,93.99,Long tail
+380,campaign_519,28,137.49,0.06,94.05,Long tail
+381,campaign_93,2,135.52,0.06,94.11,Long tail
+382,campaign_304,12,134.16,0.06,94.18,Long tail
+383,campaign_256,6,133.14,0.06,94.24,Long tail
+384,campaign_134,1,132.17,0.06,94.30,Long tail
+385,campaign_46,2,131.89,0.06,94.36,Long tail
+386,campaign_476,1,129.66,0.06,94.42,Long tail
+387,campaign_15,7,129.64,0.06,94.47,Long tail
+388,campaign_163,8,128.66,0.06,94.53,Long tail
+389,campaign_114,27,128.15,0.06,94.59,Long tail
+390,campaign_115,7,127.23,0.06,94.65,Long tail
+391,campaign_537,9,126.74,0.06,94.71,Long tail
+392,campaign_492,11,126.17,0.06,94.76,Long tail
+393,campaign_399,10,123.87,0.06,94.82,Long tail
+394,campaign_244,16,123.00,0.06,94.88,Long tail
+395,campaign_445,18,121.71,0.06,94.93,Long tail
+396,campaign_64,2,121.13,0.06,94.99,Long tail
+397,campaign_301,5,120.44,0.05,95.04,Long tail
+398,campaign_146,2,118.93,0.05,95.10,Long tail
+399,campaign_464,4,118.59,0.05,95.15,Long tail
+400,campaign_550,9,118.36,0.05,95.20,Long tail
+401,campaign_458,2,117.09,0.05,95.26,Long tail
+402,campaign_472,16,114.82,0.05,95.31,Long tail
+403,campaign_292,2,109.86,0.05,95.36,Long tail
+404,campaign_516,15,109.85,0.05,95.41,Long tail
+405,campaign_177,2,109.18,0.05,95.46,Long tail
+406,campaign_159,2,107.97,0.05,95.51,Long tail
+407,campaign_377,8,107.83,0.05,95.56,Long tail
+408,campaign_559,3,107.82,0.05,95.61,Long tail
+409,campaign_442,1,106.80,0.05,95.65,Long tail
+410,campaign_503,6,106.39,0.05,95.70,Long tail
+411,campaign_237,20,105.94,0.05,95.75,Long tail
+412,campaign_206,2,104.42,0.05,95.80,Long tail
+413,campaign_266,2,101.39,0.05,95.84,Long tail
+414,campaign_12,2,101.04,0.05,95.89,Long tail
+415,campaign_269,5,100.83,0.05,95.98,Long tail
+416,campaign_135,2,100.83,0.05,95.98,Long tail
+417,campaign_583,15,100.32,0.05,96.03,Long tail
+418,campaign_543,2,96.62,0.04,96.07,Long tail
+419,campaign_31,4,95.41,0.04,96.12,Long tail
+420,campaign_66,4,94.02,0.04,96.16,Long tail
+421,campaign_413,5,91.42,0.04,96.20,Long tail
+422,campaign_260,5,89.67,0.04,96.24,Long tail
+423,campaign_330,5,89.38,0.04,96.28,Long tail
+424,campaign_588,7,88.44,0.04,96.32,Long tail
+425,campaign_397,2,88.15,0.04,96.36,Long tail
+426,campaign_477,5,87.81,0.04,96.40,Long tail
+427,campaign_535,2,87.13,0.04,96.48,Long tail
+428,campaign_214,2,87.13,0.04,96.48,Long tail
+429,campaign_255,3,86.18,0.04,96.52,Long tail
+430,campaign_342,2,85.57,0.04,96.56,Long tail
+431,campaign_473,2,84.92,0.04,96.60,Long tail
+432,campaign_400,19,84.62,0.04,96.64,Long tail
+433,campaign_175,2,84.00,0.04,96.67,Long tail
+434,campaign_172,5,83.67,0.04,96.71,Long tail
+435,campaign_392,2,82.84,0.04,96.75,Long tail
+436,campaign_294,4,80.30,0.04,96.79,Long tail
+437,campaign_580,4,80.23,0.04,96.82,Long tail
+438,campaign_491,2,80.09,0.04,96.86,Long tail
+439,campaign_421,2,78.43,0.04,96.90,Long tail
+440,campaign_243,41,78.26,0.04,96.93,Long tail
+441,campaign_517,18,77.54,0.04,96.97,Long tail
+442,campaign_297,3,77.07,0.04,97.00,Long tail
+443,campaign_469,2,75.83,0.03,97.04,Long tail
+444,campaign_230,3,74.84,0.03,97.07,Long tail
+445,campaign_352,3,74.61,0.03,97.10,Long tail
+446,campaign_406,1,74.45,0.03,97.14,Long tail
+447,campaign_486,2,74.20,0.03,97.17,Long tail
+448,campaign_51,1,73.98,0.03,97.21,Long tail
+449,campaign_370,1,73.98,0.03,97.24,Long tail
+450,campaign_323,1,73.97,0.03,97.27,Long tail
+451,campaign_262,1,73.47,0.03,97.31,Long tail
+452,campaign_105,1,72.21,0.03,97.34,Long tail
+453,campaign_69,1,71.32,0.03,97.37,Long tail
+454,campaign_169,1,70.04,0.03,97.44,Long tail
+455,campaign_168,1,70.04,0.03,97.44,Long tail
+456,campaign_590,3,70.01,0.03,97.47,Long tail
+457,campaign_546,2,69.68,0.03,97.50,Long tail
+458,campaign_240,2,69.64,0.03,97.53,Long tail
+459,campaign_587,2,69.57,0.03,97.56,Long tail
+460,campaign_251,2,69.52,0.03,97.59,Long tail
+461,campaign_337,2,69.27,0.03,97.63,Long tail
+462,campaign_43,1,68.68,0.03,97.69,Long tail
+463,campaign_379,1,68.68,0.03,97.69,Long tail
+464,campaign_529,2,68.26,0.03,97.72,Long tail
+465,campaign_363,2,67.73,0.03,97.75,Long tail
+466,campaign_223,1,66.55,0.03,97.78,Long tail
+467,campaign_73,2,66.28,0.03,97.81,Long tail
+468,campaign_513,4,65.29,0.03,97.84,Long tail
+469,campaign_57,2,65.14,0.03,97.87,Long tail
+470,campaign_534,4,64.98,0.03,97.90,Long tail
+471,campaign_402,2,64.79,0.03,97.93,Long tail
+472,campaign_488,3,63.72,0.03,97.96,Long tail
+473,campaign_591,1,63.71,0.03,97.99,Long tail
+474,campaign_264,1,62.37,0.03,98.02,Long tail
+475,campaign_239,2,61.09,0.03,98.04,Long tail
+476,campaign_511,3,60.57,0.03,98.07,Long tail
+477,campaign_215,1,60.57,0.03,98.10,Long tail
+478,campaign_339,2,59.33,0.03,98.12,Long tail
+479,campaign_426,1,58.87,0.03,98.15,Long tail
+480,campaign_226,11,58.84,0.03,98.18,Long tail
+481,campaign_344,1,58.46,0.03,98.21,Long tail
+482,campaign_395,1,58.18,0.03,98.23,Long tail
+483,campaign_247,4,58.07,0.03,98.26,Long tail
+484,campaign_552,5,57.87,0.03,98.28,Long tail
+485,campaign_556,1,57.55,0.03,98.31,Long tail
+486,campaign_423,3,57.36,0.03,98.34,Long tail
+487,campaign_212,1,57.25,0.03,98.39,Long tail
+488,campaign_9,1,57.25,0.03,98.39,Long tail
+489,campaign_17,1,56.62,0.03,98.41,Long tail
+490,campaign_373,1,54.59,0.02,98.44,Long tail
+491,campaign_375,2,54.17,0.02,98.46,Long tail
+492,campaign_261,8,54.04,0.02,98.49,Long tail
+493,campaign_356,1,52.93,0.02,98.51,Long tail
+494,campaign_67,1,52.35,0.02,98.54,Long tail
+495,campaign_96,1,52.23,0.02,98.56,Long tail
+496,campaign_538,2,51.56,0.02,98.61,Long tail
+497,campaign_448,2,51.56,0.02,98.61,Long tail
+498,campaign_33,2,50.99,0.02,98.63,Long tail
+499,campaign_499,1,50.77,0.02,98.65,Long tail
+500,campaign_567,1,50.41,0.02,98.68,Long tail
+501,campaign_10,1,49.86,0.02,98.70,Long tail
+502,campaign_501,2,49.66,0.02,98.72,Long tail
+503,campaign_319,1,45.96,0.02,98.74,Long tail
+504,campaign_225,14,45.77,0.02,98.76,Long tail
+505,campaign_575,1,45.01,0.02,98.78,Long tail
+506,campaign_381,2,44.95,0.02,98.80,Long tail
+507,campaign_322,1,44.80,0.02,98.82,Long tail
+508,campaign_431,2,44.75,0.02,98.85,Long tail
+509,campaign_157,1,44.66,0.02,98.87,Long tail
+510,campaign_280,1,44.48,0.02,98.89,Long tail
+511,campaign_335,1,44.41,0.02,98.91,Long tail
+512,campaign_487,5,44.32,0.02,98.93,Long tail
+513,campaign_485,1,44.20,0.02,98.95,Long tail
+514,campaign_457,1,43.85,0.02,98.97,Long tail
+515,campaign_14,2,43.67,0.02,98.99,Long tail
+516,campaign_574,1,43.56,0.02,99.01,Long tail
+517,campaign_293,1,43.38,0.02,99.03,Long tail
+518,campaign_234,2,42.75,0.02,99.05,Long tail
+519,campaign_48,1,42.03,0.02,99.06,Long tail
+520,campaign_403,1,42.01,0.02,99.08,Long tail
+521,campaign_376,1,41.41,0.02,99.10,Long tail
+522,campaign_85,1,40.73,0.02,99.12,Long tail
+523,campaign_253,2,40.32,0.02,99.14,Long tail
+524,campaign_333,1,40.03,0.02,99.16,Long tail
+525,campaign_11,1,39.98,0.02,99.18,Long tail
+526,campaign_385,4,39.29,0.02,99.19,Long tail
+527,campaign_500,2,39.25,0.02,99.21,Long tail
+528,campaign_355,1,39.07,0.02,99.23,Long tail
+529,campaign_228,1,38.21,0.02,99.25,Long tail
+530,campaign_494,1,38.13,0.02,99.28,Long tail
+531,campaign_270,1,38.13,0.02,99.28,Long tail
+532,campaign_340,2,38.03,0.02,99.30,Long tail
+533,campaign_313,3,37.73,0.02,99.32,Long tail
+534,campaign_178,2,37.63,0.02,99.33,Long tail
+535,campaign_386,1,37.34,0.02,99.37,Long tail
+536,campaign_393,1,37.34,0.02,99.37,Long tail
+537,campaign_22,1,37.31,0.02,99.38,Long tail
+538,campaign_394,2,37.30,0.02,99.40,Long tail
+539,campaign_312,2,37.13,0.02,99.42,Long tail
+540,campaign_277,1,37.09,0.02,99.43,Long tail
+541,campaign_582,1,36.79,0.02,99.45,Long tail
+542,campaign_502,1,36.67,0.02,99.47,Long tail
+543,campaign_463,1,36.40,0.02,99.48,Long tail
+544,campaign_536,1,36.30,0.02,99.50,Long tail
+545,campaign_532,1,36.06,0.02,99.52,Long tail
+546,campaign_581,1,35.80,0.02,99.53,Long tail
+547,campaign_252,2,35.62,0.02,99.55,Long tail
+548,campaign_213,1,35.56,0.02,99.57,Long tail
+549,campaign_133,1,35.51,0.02,99.58,Long tail
+550,campaign_6,1,34.92,0.02,99.60,Long tail
+551,campaign_68,1,34.84,0.02,99.63,Long tail
+552,campaign_75,1,34.84,0.02,99.63,Long tail
+553,campaign_424,1,34.36,0.02,99.66,Long tail
+554,campaign_427,1,34.36,0.02,99.66,Long tail
+555,campaign_461,1,34.12,0.02,99.69,Long tail
+556,campaign_158,1,34.12,0.02,99.69,Long tail
+557,campaign_507,2,34.11,0.02,99.71,Long tail
+558,campaign_510,3,33.32,0.02,99.72,Long tail
+559,campaign_398,1,33.10,0.02,99.74,Long tail
+560,campaign_197,1,32.57,0.01,99.75,Long tail
+561,campaign_238,2,32.33,0.01,99.77,Long tail
+562,campaign_208,1,31.41,0.01,99.78,Long tail
+563,campaign_390,1,30.76,0.01,99.80,Long tail
+564,campaign_227,1,29.05,0.01,99.81,Long tail
+565,campaign_443,1,28.82,0.01,99.82,Long tail
+566,campaign_265,1,28.75,0.01,99.84,Long tail
+567,campaign_391,1,27.93,0.01,99.85,Long tail
+568,campaign_181,1,27.50,0.01,99.86,Long tail
+569,campaign_274,1,26.48,0.01,99.87,Long tail
+570,campaign_497,1,26.37,0.01,99.88,Long tail
+571,campaign_86,1,25.78,0.01,99.90,Long tail
+572,campaign_362,1,23.06,0.01,99.91,Long tail
+573,campaign_20,3,22.94,0.01,99.92,Long tail
+574,campaign_444,1,22.86,0.01,99.93,Long tail
+575,campaign_326,1,22.82,0.01,99.96,Long tail
+576,campaign_549,1,22.82,0.01,99.96,Long tail
+577,campaign_18,2,22.82,0.01,99.96,Long tail
+578,campaign_231,1,19.85,0.01,99.97,Long tail
+579,campaign_365,1,19.01,0.01,99.98,Long tail
+580,campaign_341,1,18.18,0.01,99.98,Long tail
+581,campaign_229,1,17.81,0.01,99.99,Long tail
+582,campaign_248,1,16.17,0.01,100.00,Long tail
+583,campaign_13,1,0.00,0.00,100.00,Long tail
+584,campaign_420,1,0.00,0.00,100.00,Long tail
+585,campaign_94,1,0.00,0.00,100.00,Long tail
+586,campaign_129,5,0.00,0.00,100.00,Long tail
+587,campaign_576,1,0.00,0.00,100.00,Long tail
+588,campaign_577,2,0.00,0.00,100.00,Long tail
+589,campaign_288,1,0.00,0.00,100.00,Long tail
+590,campaign_147,1,0.00,0.00,100.00,Long tail
+591,campaign_578,1,0.00,0.00,100.00,Long tail
