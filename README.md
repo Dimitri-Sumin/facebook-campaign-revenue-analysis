@@ -10,7 +10,6 @@ A campaign-level analytics case built from real Facebook Ads data, evaluating ho
 - Only 4 campaigns classified as Scale candidates
 - Top-value campaigns showed 90–100% late LTV share
 
----
 
 ## Live Dashboard
 
@@ -18,7 +17,6 @@ Interactive Tableau visualization:
 
 [**➜ View Interactive Dashboard**](https://public.tableau.com/app/profile/d.s6530/viz/campaign_revenue_dashboard/Dashboard)
 
----
 
 ## Business Problem
 
@@ -26,7 +24,6 @@ Paid acquisition campaigns differ not just in volume, but in the quality of mone
 
 This project addresses the need to move beyond surface-level performance metrics and build an analytical framework that answers: **which campaigns are worth scaling, optimizing, holding, or cutting, and why?**
 
----
 
 ## Dataset Overview
 
@@ -42,7 +39,6 @@ This project addresses the need to move beyond surface-level performance metrics
 
 > **Note:** Validation indicated that Day 0, Day 3, and Day 7 fields should be treated as **independent monetization windows** rather than cumulative values. This makes monetization timing a core analytical dimension: same-day metrics alone can significantly underestimate campaign quality.
 
----
 
 ## Analytical Goals
 
@@ -52,7 +48,6 @@ This project addresses the need to move beyond surface-level performance metrics
 - Detect campaigns with strong delayed LTV that would be misclassified by Day 0 metrics alone
 - Build a strategic segmentation framework for portfolio-level decision making
 
----
 
 ## Tech Stack
 
@@ -63,7 +58,6 @@ This project addresses the need to move beyond surface-level performance metrics
 | **Tableau Public** | Interactive dashboard and visualization layer |
 | **SQL** | Analytical queries, derived metrics, segmentation logic |
 
----
 
 ## KPI Framework
 
@@ -92,7 +86,6 @@ This project addresses the need to move beyond surface-level performance metrics
 
 Higher `monetization_efficiency` indicates stronger value generated per payment event. High payment volume with low efficiency may signal weak monetization quality.
 
----
 
 ## Project Workflow
 
@@ -111,7 +104,6 @@ Identified campaigns driven by delayed payment and delayed LTV behavior, compare
 **5. Dashboard Development**  
 Combined all analytical views into a single Tableau dashboard covering revenue concentration, efficiency matrix, strategic segmentation, and delayed monetization behavior.
 
----
 
 ## Dashboard Overview
 
@@ -119,7 +111,6 @@ Combined all analytical views into a single Tableau dashboard covering revenue c
 
 The Tableau Public dashboard integrates four analytical views into a single business decision layer: revenue concentration, monetization efficiency, delayed monetization behavior, and campaign strategic segmentation. It is designed for portfolio-level review and prioritization.
 
----
 
 ## Visualization Analysis
 
@@ -131,7 +122,6 @@ Campaigns were ranked by total observed LTV contribution, and cumulative revenue
 
 This implies that prioritization efforts should focus on identifying and validating a small number of high-performing structures rather than optimizing the portfolio uniformly.
 
----
 
 ### Campaign Efficiency vs Value Matrix
 
@@ -148,7 +138,6 @@ Each campaign is plotted on two dimensions simultaneously: Monetization Efficien
 
 Most campaigns cluster in low-value zones. A smaller subset enters the Scale and Optimize quadrants, confirming that raw payment volume alone is insufficient for prioritization decisions.
 
----
 
 ### Campaign Portfolio Distribution by Strategic Tier
 
@@ -163,7 +152,6 @@ Most campaigns cluster in low-value zones. A smaller subset enters the Scale and
 
 **465 campaigns** fall into the Cut tier, the largest segment by count and a source of operational noise in the portfolio. Only **4 campaigns** reach Scale-level classification. This distribution is consistent with the concentration behavior identified in the Pareto analysis: a structurally small subset drives the meaningful share of observed business value.
 
----
 
 ### Delayed Monetization vs Value
 
@@ -182,7 +170,6 @@ Top campaigns exhibiting this pattern:
 
 Evaluating campaigns on Day 0 metrics alone would likely misclassify these as weak performers. **Monetization timing is not a secondary signal. It is a core analytical dimension.**
 
----
 
 ## Key Findings
 
@@ -193,7 +180,6 @@ Evaluating campaigns on Day 0 metrics alone would likely misclassify these as we
 - **Only 4 campaigns qualify as Scale candidates** out of 591 unique campaign entities, reflecting the concentration of acquisition quality in a small subset of the portfolio.
 - **Creative reuse alone does not guarantee stable performance.** Reused creative structures should be evaluated independently through campaign-level value, efficiency, and timing metrics.
 
----
 
 ## Business Recommendations
 
@@ -209,7 +195,6 @@ Campaigns with stable moderate performance should remain under monitoring. No im
 **Cut**  
 Campaigns with weak value generation and low efficiency should be deprioritized or removed. Budget and operational attention should be reallocated toward Scale and Optimize candidates.
 
----
 
 ## Limitations
 
@@ -219,7 +204,6 @@ Campaigns with weak value generation and low efficiency should be deprioritized 
 - Single advertising account, so findings may not generalize across accounts or industries
 - Campaign scaling recommendations are directional because acquisition cost data is unavailable
 
----
 
 ## Deliverables
 
@@ -231,7 +215,6 @@ Campaigns with weak value generation and low efficiency should be deprioritized 
 - ✅ Business recommendation framework
 - ✅ KPI definitions and derived metric documentation
 
----
 
 ## Repository Structure
 
@@ -252,7 +235,6 @@ campaign-revenue-analytics/
 └── README.md
 ```
 
----
 
 *Built as a portfolio analytics project demonstrating end-to-end workflow: data validation → SQL analytical layer → revenue concentration analysis → strategic segmentation → Tableau dashboard.*
 
