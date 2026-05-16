@@ -19,18 +19,24 @@ derived business indicators used for:
 Derived KPIs:
 
 payments_total
-    Total observed payments across
+    Total observed payment events across
     reporting windows
 
 ltv_total
-    Total observed customer value
+    Total observed revenue / LTV across
+    reporting windows
 
-share_of_late_payments
-    Share of monetization occurring
-    after day 0
+late_payment_share
+    Share of payment events occurring
+    after Day 0
 
-ltv_per_payment
-    Average value generated per payment
+late_ltv_share
+    Share of revenue / LTV generated
+    after Day 0
+
+monetization_efficiency
+    Average observed LTV generated
+    per payment event
 
 
 Notes:
@@ -42,13 +48,16 @@ windows rather than cumulative values.
 As a result:
 
 payments_total =
-0d + 3d + 7d
+payments_0d + payments_3d + payments_7d
+
+ltv_total =
+ltv_0d + ltv_3d + ltv_7d
 
 rather than using cumulative progression.
 */
 
 
-CREATE VIEW campaign_metrics AS
+CREATE OR REPLACE VIEW campaign_metrics AS
 
 SELECT
 
@@ -63,7 +72,7 @@ SELECT
     AS payments_total,
 
 
-    -- total customer value
+    -- total observed revenue / LTV
 
     ltv_0d +
     ltv_3d +
@@ -72,7 +81,7 @@ SELECT
     AS ltv_total,
 
 
-    -- share of delayed monetization
+    -- share of payment events occurring after Day 0
 
     CASE
 
@@ -88,17 +97,47 @@ SELECT
 
         /
 
-        (payments_0d +
-         payments_3d +
-         payments_7d)
+        NULLIF(
+            payments_0d +
+            payments_3d +
+            payments_7d,
+            0
+        )
 
     END
 
-    AS share_of_late_payments,
+    AS late_payment_share,
 
 
-    -- customer value generated
-    -- per observed payment
+    -- share of observed revenue / LTV generated after Day 0
+
+    CASE
+
+        WHEN ltv_0d +
+             ltv_3d +
+             ltv_7d = 0
+
+        THEN 0
+
+        ELSE
+
+        (ltv_3d + ltv_7d)::numeric
+
+        /
+
+        NULLIF(
+            ltv_0d +
+            ltv_3d +
+            ltv_7d,
+            0
+        )
+
+    END
+
+    AS late_ltv_share,
+
+
+    -- average observed LTV generated per payment event
 
     CASE
 
@@ -112,16 +151,19 @@ SELECT
 
         (ltv_0d +
          ltv_3d +
-         ltv_7d)
+         ltv_7d)::numeric
 
         /
 
-        (payments_0d +
-         payments_3d +
-         payments_7d)
+        NULLIF(
+            payments_0d +
+            payments_3d +
+            payments_7d,
+            0
+        )
 
     END
 
-    AS ltv_per_payment
+    AS monetization_efficiency
 
 FROM campaign_revenue;
