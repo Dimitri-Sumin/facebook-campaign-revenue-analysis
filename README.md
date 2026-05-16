@@ -107,7 +107,7 @@ Combined all analytical views into a single Tableau dashboard covering revenue c
 
 ## Dashboard Overview
 
-![Tableau Dashboard](images/tableau_dashboard.png)
+![Tableau Dashboard](Images/tableau_dashboard.png)
 
 The Tableau Public dashboard integrates four analytical views into a single business decision layer: revenue concentration, monetization efficiency, delayed monetization behavior, and campaign strategic segmentation. It is designed for portfolio-level review and prioritization.
 
@@ -116,7 +116,7 @@ The Tableau Public dashboard integrates four analytical views into a single busi
 
 ### Campaign Revenue Concentration Analysis
 
-![Campaign Revenue Concentration](images/pareto_campaign_revenue.png)
+![Campaign Revenue Concentration](Images/pareto_campaign_revenue.png)
 
 Campaigns were ranked by total observed LTV contribution, and cumulative revenue share was plotted to reveal concentration structure. The curve shows a Pareto-like distribution: **approximately 20–30% of campaigns generate around 80% of total observed LTV.** Revenue generation is structurally concentrated, not evenly distributed across the portfolio.
 
@@ -125,7 +125,7 @@ This implies that prioritization efforts should focus on identifying and validat
 
 ### Campaign Efficiency vs Value Matrix
 
-![Campaign Efficiency vs Value Matrix](images/campaign_tier_matrix.png)
+![Campaign Efficiency vs Value Matrix](Images/campaign_tier_matrix.png)
 
 Each campaign is plotted on two dimensions simultaneously: Monetization Efficiency on the X axis and Campaign LTV on the Y axis. This creates a four-quadrant strategic classification:
 
@@ -141,7 +141,7 @@ Most campaigns cluster in low-value zones. A smaller subset enters the Scale and
 
 ### Campaign Portfolio Distribution by Strategic Tier
 
-![Campaign Portfolio Distribution](images/campaign_segment_distribution.png)
+![Campaign Portfolio Distribution](Images/campaign_segment_distribution.png)
 
 | Tier | Campaign Count |
 | - | - |
@@ -155,7 +155,7 @@ Most campaigns cluster in low-value zones. A smaller subset enters the Scale and
 
 ### Delayed Monetization vs Value
 
-![Delayed Monetization vs Value](images/delayed_monetization_vs_value.png)
+![Delayed Monetization vs Value](Images/delayed_monetization_vs_value.png)
 
 This chart plots Late LTV Share on the X axis against Campaign LTV on the Y axis, with bubble size representing total payment volume. The observed pattern suggests that **most high-value campaigns cluster at late LTV shares of 90–100%.**
 
