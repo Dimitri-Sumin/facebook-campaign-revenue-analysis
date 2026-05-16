@@ -1,16 +1,16 @@
 # Facebook Campaign Revenue Analytics
 
-A campaign-level analytics case built from real Facebook Ads data, evaluating how paid acquisition translates into revenue and customer value across multiple monetization windows. The project identifies not only which campaigns generate conversions, but which acquisition sources produce stronger monetization quality, delayed revenue generation, and more sustainable customer value.
+A campaign-level analytics case built from real Facebook Ads data, evaluating how paid acquisition translates into revenue and observed customer value across multiple monetization windows. The project identifies not only which campaigns generate conversions, but which acquisition sources produce stronger monetization quality, delayed revenue generation, and higher observed value per payment event.
 
 ## Key Results
 
 - 3,155 validated records analyzed
-- 591 campaign entities
-- 20–30% campaigns generated ~80% of value
+- 591 unique campaign entities
+- 20–30% of campaigns generated approximately 80% of observed LTV
 - Only 4 campaigns classified as Scale candidates
-- High-value campaigns showed 90–100% delayed monetization
+- Top-value campaigns showed 90–100% late LTV share
 
-\---
+---
 
 ## Live Dashboard
 
@@ -18,215 +18,224 @@ Interactive Tableau visualization:
 
 [**➜ View Interactive Dashboard**](https://public.tableau.com/app/profile/d.s6530/viz/campaign_revenue_dashboard/Dashboard)
 
-\---
+---
 
 ## Business Problem
 
-Paid acquisition campaigns differ not just in volume — but in the *quality* of monetization they produce. Raw payment counts can mask weak value generation, while lower-volume campaigns may deliver disproportionate long-term LTV.
+Paid acquisition campaigns differ not just in volume, but in the quality of monetization they produce. Raw payment counts can mask weak value generation, while lower-volume campaigns may deliver disproportionate LTV.
 
-This project addresses the need to move beyond surface-level performance metrics and build an analytical framework that answers: **which campaigns are worth scaling, optimizing, holding, or cutting — and why?**
+This project addresses the need to move beyond surface-level performance metrics and build an analytical framework that answers: **which campaigns are worth scaling, optimizing, holding, or cutting, and why?**
 
-\---
+---
 
 ## Dataset Overview
 
-|Attribute|Detail|
-|-|-|
-|**Source**|Facebook Ads (single advertising account)|
-|**Initial rows**|3,164|
-|**Duplicates removed**|9|
-|**Final analytical records**|3,155|
-|**Monetization windows**|Day 0 / Day 3 / Day 7|
-|**Spend data**|Not available|
+| Attribute | Detail |
+| - | - |
+| **Source** | Facebook Ads, single advertising account |
+| **Initial rows** | 3,164 |
+| **Duplicates removed** | 9 |
+| **Final analytical records** | 3,155 |
+| **Unique campaign entities** | 591 |
+| **Monetization windows** | Day 0 / Day 3 / Day 7 |
+| **Spend data** | Not available |
 
-> \*\*Note:\*\* Validation confirmed that Day 0, Day 3, and Day 7 windows function as \*\*independent monetization windows\*\*, not cumulative values. This reframes monetization timing as a core analytical dimension — same-day metrics alone can significantly underestimate campaign quality.
+> **Note:** Validation indicated that Day 0, Day 3, and Day 7 fields should be treated as **independent monetization windows** rather than cumulative values. This makes monetization timing a core analytical dimension: same-day metrics alone can significantly underestimate campaign quality.
 
-\---
+---
 
 ## Analytical Goals
 
-* Evaluate monetization timing across three independent reporting windows
-* Identify revenue concentration patterns across the campaign portfolio
-* Classify campaigns by monetization efficiency and customer value quality
-* Detect campaigns with strong delayed monetization that would be misclassified by Day 0 metrics alone
-* Build a strategic segmentation framework for portfolio-level decision making
+- Evaluate monetization timing across three independent reporting windows
+- Identify revenue concentration patterns across the campaign portfolio
+- Classify campaigns by monetization efficiency and observed value quality
+- Detect campaigns with strong delayed LTV that would be misclassified by Day 0 metrics alone
+- Build a strategic segmentation framework for portfolio-level decision making
 
-\---
+---
 
 ## Tech Stack
 
-|Tool|Purpose|
-|-|-|
-|**PostgreSQL**|Data import, KPI layer, campaign ranking, Pareto analysis, segmentation|
-|**Excel**|Data validation, duplicate removal, exploratory pivot analysis|
-|**Tableau Public**|Interactive dashboard and visualization layer|
-|**SQL**|Analytical queries, derived metrics, segmentation logic|
+| Tool | Purpose |
+| - | - |
+| **PostgreSQL** | Data import, KPI layer, campaign ranking, Pareto analysis, segmentation |
+| **Excel** | Data validation, duplicate removal, exploratory pivot analysis |
+| **Tableau Public** | Interactive dashboard and visualization layer |
+| **SQL** | Analytical queries, derived metrics, segmentation logic |
 
-\---
+---
 
 ## KPI Framework
 
 ### Monetization Metrics
 
-|Metric|Description|
-|-|-|
-|`payments\_0d`|Payments recorded on Day 0|
-|`payments\_3d`|Payments recorded on Day 3|
-|`payments\_7d`|Payments recorded on Day 7|
-|`ltv\_0d`|Revenue generated on Day 0|
-|`ltv\_3d`|Revenue generated on Day 3|
-|`ltv\_7d`|Revenue generated on Day 7|
+| Metric | Description |
+| - | - |
+| `payments_0d` | Payment events recorded in the Day 0 window |
+| `payments_3d` | Payment events recorded in the Day 3 window |
+| `payments_7d` | Payment events recorded in the Day 7 window |
+| `ltv_0d` | Revenue / LTV generated in the Day 0 window |
+| `ltv_3d` | Revenue / LTV generated in the Day 3 window |
+| `ltv_7d` | Revenue / LTV generated in the Day 7 window |
 
 ### Derived Metrics
 
-|Metric|Formula|Interpretation|
-|-|-|-|
-|`payments\_total`|`payments\_0d + payments\_3d + payments\_7d`|Total payment events per campaign|
-|`ltv\_total`|`ltv\_0d + ltv\_3d + ltv\_7d`|Total revenue generated per campaign|
-|`share\_of\_late\_payments`|`(payments\_3d + payments\_7d) / payments\_total`|Proportion of delayed monetization|
-|`ltv\_per\_payment`|`ltv\_total / payments\_total`|Average revenue per payment event|
-|`monetization\_efficiency`|`ltv\_total / payments\_total`|Customer value quality per payment|
+| Metric | Formula | Interpretation |
+| - | - | - |
+| `payments_total` | `payments_0d + payments_3d + payments_7d` | Total payment events across all observed windows |
+| `ltv_total` | `ltv_0d + ltv_3d + ltv_7d` | Total observed revenue / LTV across all windows |
+| `late_payment_share` | `(payments_3d + payments_7d) / payments_total` | Share of payment events occurring after Day 0 |
+| `late_ltv_share` | `(ltv_3d + ltv_7d) / ltv_total` | Share of revenue / LTV generated after Day 0 |
+| `monetization_efficiency` | `ltv_total / payments_total` | Average observed LTV generated per payment event |
 
-> Higher `monetization\_efficiency` indicates stronger value generated per payment event. High payment volume with low efficiency signals monetization quality risk.
+`monetization_efficiency` is expressed in absolute value terms, not as a percentage. For example, a value of `20` means that each payment event generated, on average, 20 units of observed LTV.
 
-\---
+Higher `monetization_efficiency` indicates stronger value generated per payment event. High payment volume with low efficiency may signal weak monetization quality.
+
+---
 
 ## Project Workflow
 
-**1. Data Validation and Normalization**
+**1. Data Validation and Normalization**  
 Standardized naming conventions, removed 9 duplicate records, validated reporting window structure, and performed exploratory pivot analysis in Excel.
 
-**2. SQL Analytical Layer**
+**2. SQL Analytical Layer**  
 Built PostgreSQL import workflow, KPI calculation layer, campaign ranking logic, Pareto analysis, and campaign segmentation model.
 
-**3. Revenue Concentration Analysis**
+**3. Revenue Concentration Analysis**  
 Ranked campaigns by total LTV contribution, calculated cumulative revenue share, and evaluated Pareto-like concentration behavior across the portfolio.
 
-**4. Delayed Monetization Analysis**
-Identified campaigns driven by delayed payment behavior, compared immediate vs. delayed value generation, and evaluated long-term sustainability patterns.
+**4. Delayed Monetization Analysis**  
+Identified campaigns driven by delayed payment and delayed LTV behavior, compared immediate vs. delayed value generation, and evaluated timing patterns across high-value campaigns.
 
-**5. Dashboard Development**
+**5. Dashboard Development**  
 Combined all analytical views into a single Tableau dashboard covering revenue concentration, efficiency matrix, strategic segmentation, and delayed monetization behavior.
 
-\---
+---
 
 ## Dashboard Overview
 
-![Tableau Dashboard](Images/tableau\_dashboard.png)
+![Tableau Dashboard](images/tableau_dashboard.png)
 
-The Tableau Public dashboard integrates four analytical views into a single business decision layer: revenue concentration, monetization efficiency, delayed monetization behavior, and campaign strategic segmentation. Designed for portfolio-level review and prioritization.
+The Tableau Public dashboard integrates four analytical views into a single business decision layer: revenue concentration, monetization efficiency, delayed monetization behavior, and campaign strategic segmentation. It is designed for portfolio-level review and prioritization.
 
-\---
+---
 
 ## Visualization Analysis
 
 ### Campaign Revenue Concentration Analysis
 
-![Campaign Revenue Concentration](Images/pareto\_campaign\_revenue.png)
+![Campaign Revenue Concentration](images/pareto_campaign_revenue.png)
 
-Campaigns were ranked by total LTV contribution and cumulative revenue share was plotted to reveal concentration structure. The curve shows a classic Pareto-like distribution: **approximately 20–30% of campaigns generate around 80% of total observed LTV.** Revenue generation is structurally concentrated, not evenly distributed across the portfolio. This implies that scaling efforts should focus on identifying and replicating a small number of high-performing structures rather than optimizing the portfolio uniformly.
+Campaigns were ranked by total observed LTV contribution, and cumulative revenue share was plotted to reveal concentration structure. The curve shows a Pareto-like distribution: **approximately 20–30% of campaigns generate around 80% of total observed LTV.** Revenue generation is structurally concentrated, not evenly distributed across the portfolio.
 
-\---
+This implies that prioritization efforts should focus on identifying and validating a small number of high-performing structures rather than optimizing the portfolio uniformly.
+
+---
 
 ### Campaign Efficiency vs Value Matrix
 
-![Campaign Efficiency vs Value Matrix](Images/campaign\_tier\_matrix.png)
+![Campaign Efficiency vs Value Matrix](images/campaign_tier_matrix.png)
 
-Each campaign is plotted on two dimensions simultaneously — Monetization Efficiency (X axis) and Campaign LTV (Y axis) — creating a four-quadrant strategic classification:
+Each campaign is plotted on two dimensions simultaneously: Monetization Efficiency on the X axis and Campaign LTV on the Y axis. This creates a four-quadrant strategic classification:
 
-|Quadrant|Criteria|Action|
-|-|-|-|
-|**Scale**|High efficiency + high LTV|Prioritize and expand budget|
-|**Optimize**|Lower efficiency but strong value opportunity|Improve monetization quality|
-|**Hold**|Stable moderate performance|Monitor, no immediate action|
-|**Cut**|Low value + weak efficiency|Deprioritize or remove|
+| Quadrant | Criteria | Action |
+| - | - | - |
+| **Scale** | High efficiency + high LTV | Prioritize for further validation and potential scaling |
+| **Optimize** | Lower efficiency but strong value opportunity | Improve monetization quality before scaling |
+| **Hold** | Stable moderate performance | Monitor, no immediate action |
+| **Cut** | Low value + weak efficiency | Deprioritize or remove |
 
 Most campaigns cluster in low-value zones. A smaller subset enters the Scale and Optimize quadrants, confirming that raw payment volume alone is insufficient for prioritization decisions.
 
-\---
+---
 
 ### Campaign Portfolio Distribution by Strategic Tier
 
-![Campaign Portfolio Distribution](Images/campaign\_segment\_distribution.png)
+![Campaign Portfolio Distribution](images/campaign_segment_distribution.png)
 
-|Tier|Campaign Count|
-|-|-|
-|🔴 Cut|465|
-|⚪ Hold|87|
-|🔵 Optimize|35|
-|🟢 Scale|4|
+| Tier | Campaign Count |
+| - | - |
+| 🔴 Cut | 465 |
+| ⚪ Hold | 87 |
+| 🔵 Optimize | 35 |
+| 🟢 Scale | 4 |
 
-**465 campaigns** fall into the Cut tier — the largest segment by count, representing operational noise in the portfolio. Only **4 campaigns** reach Scale-level classification. This distribution is consistent with the concentration behavior identified in the Pareto analysis: a structurally small subset drives the meaningful share of business value.
+**465 campaigns** fall into the Cut tier, the largest segment by count and a source of operational noise in the portfolio. Only **4 campaigns** reach Scale-level classification. This distribution is consistent with the concentration behavior identified in the Pareto analysis: a structurally small subset drives the meaningful share of observed business value.
 
-\---
+---
 
 ### Delayed Monetization vs Value
 
-![Delayed Monetization vs Value](Images/delayed\_monetization\_vs\_value.png)
+![Delayed Monetization vs Value](images/delayed_monetization_vs_value.png)
 
-This chart plots Delayed Monetization Share (X axis) against Campaign LTV (Y axis), with bubble size representing total payment volume. The observed pattern suggests: **most high-value campaigns cluster at delayed monetization shares of 90–100%.**
+This chart plots Late LTV Share on the X axis against Campaign LTV on the Y axis, with bubble size representing total payment volume. The observed pattern suggests that **most high-value campaigns cluster at late LTV shares of 90–100%.**
 
 Top campaigns exhibiting this pattern:
 
-|Campaign|Observation|
-|-|-|
-|`campaign\_151`|Highest LTV in dataset; near-total delayed monetization|
-|`campaign\_432`|Second highest LTV; similarly delayed structure|
-|`campaign\_149`|Strong LTV; high delayed monetization share|
-|`campaign\_38`|Notable LTV with delayed monetization dependency|
+| Campaign | Observation |
+| - | - |
+| `campaign_151` | Highest LTV in dataset; near-total late LTV share |
+| `campaign_432` | Second highest LTV; similarly delayed value structure |
+| `campaign_149` | Strong LTV; high late LTV share |
+| `campaign_38` | Notable LTV with delayed monetization dependency |
 
-Evaluating campaigns on Day 0 metrics alone would likely misclassify these as weak performers. **Monetization timing is not a secondary signal — it is a core analytical dimension.**
+Evaluating campaigns on Day 0 metrics alone would likely misclassify these as weak performers. **Monetization timing is not a secondary signal. It is a core analytical dimension.**
 
-\---
+---
 
 ## Key Findings
 
-* **Revenue is structurally concentrated.** \~20–30% of campaigns generate \~80% of total LTV. The portfolio contains substantial large long-tail campaign population.
-* **Delayed monetization dominates high-value behavior.** Top campaigns are heavily dependent on Day 3 and Day 7 monetization. Day 0 metrics systematically underestimate their value.
-* **Volume and value do not align.** High payment volume does not reliably predict high LTV. Monetization efficiency is the more meaningful signal.
-* **Reporting window structure matters.** Confirming that windows are independent (not cumulative) changed the interpretation of timing-based metrics.
-* **Only 4 campaigns qualify as Scale candidates** out of 591 total — reflecting the concentration of genuine acquisition quality in a small subset of the portfolio. Campaign-level records were aggregated into 591 unique campaign entities.
-* **Certain campaigns function as reusable acquisition assets.** Creative reuse alone does not guarantee stable performance; structural quality must be verified independently.
+- **Revenue is structurally concentrated.** Approximately 20–30% of campaigns generate around 80% of total observed LTV. The portfolio contains a substantial long-tail campaign population.
+- **Delayed monetization dominates high-value behavior.** Top campaigns are heavily dependent on Day 3 and Day 7 value generation. Day 0 metrics systematically underestimate their value.
+- **Volume and value do not always align.** High payment volume does not necessarily imply high LTV per payment event. Monetization efficiency provides a better quality signal than payment count alone.
+- **Reporting window structure matters.** Treating Day 0, Day 3, and Day 7 as independent windows changed the interpretation of timing-based metrics.
+- **Only 4 campaigns qualify as Scale candidates** out of 591 unique campaign entities, reflecting the concentration of acquisition quality in a small subset of the portfolio.
+- **Creative reuse alone does not guarantee stable performance.** Reused creative structures should be evaluated independently through campaign-level value, efficiency, and timing metrics.
 
-\---
+---
 
 ## Business Recommendations
 
-**Scale** — Campaigns with high monetization efficiency, strong delayed monetization share, and sustainable value generation. Replicate creative and targeting structures. Prioritize budget allocation.
+**Scale**  
+Campaigns with high monetization efficiency, strong LTV, and significant delayed value generation should be prioritized for further validation and potential scaling. Replicate and test the underlying creative, targeting, and campaign structures.
 
-**Optimize** — Campaigns with strong payment volume but weaker monetization sustainability. Investigate monetization bottlenecks and test structural improvements before scaling.
+**Optimize**  
+Campaigns with strong value opportunity but weaker monetization efficiency should be reviewed for quality bottlenecks. Improve monetization structure before increasing budget.
 
-**Hold** — Campaigns with stable moderate performance. Maintain current spend levels; monitor for deterioration or improvement signals before reclassifying.
+**Hold**  
+Campaigns with stable moderate performance should remain under monitoring. No immediate action is required unless their value, efficiency, or timing indicators change.
 
-**Cut** — Campaigns with weak value generation and low efficiency. Deprioritize or remove. Reallocate budget toward Scale and Optimize tiers.
+**Cut**  
+Campaigns with weak value generation and low efficiency should be deprioritized or removed. Budget and operational attention should be reallocated toward Scale and Optimize candidates.
 
-\---
+---
 
 ## Limitations
 
-* No spend data available — ROAS and CAC metrics cannot be calculated
-* No user-level behavioral data — analysis operates at campaign aggregation level only
-* Reporting windows limited to Day 0, Day 3, and Day 7
-* Single advertising account — findings may not generalize across accounts or industries
-* No CAC data — true acquisition economics cannot be fully evaluated
+- No spend data available, so ROAS and CAC metrics cannot be calculated
+- No user-level behavioral data, so the analysis operates at campaign aggregation level only
+- Reporting windows are limited to Day 0, Day 3, and Day 7
+- Single advertising account, so findings may not generalize across accounts or industries
+- Campaign scaling recommendations are directional because acquisition cost data is unavailable
 
-\---
+---
 
 ## Deliverables
 
-* ✅ Cleaned and validated dataset
-* ✅ PostgreSQL import workflow
-* ✅ SQL analytical queries (KPIs, ranking, Pareto, segmentation)
-* ✅ Tableau interactive dashboard
-* ✅ Tableau Public visualization (publicly accessible)
-* ✅ Business recommendation framework
-* ✅ KPI definitions and derived metric documentation
+- ✅ Cleaned and validated dataset
+- ✅ PostgreSQL import workflow
+- ✅ SQL analytical queries covering KPIs, ranking, Pareto analysis, and segmentation
+- ✅ Tableau interactive dashboard
+- ✅ Tableau Public visualization
+- ✅ Business recommendation framework
+- ✅ KPI definitions and derived metric documentation
 
-\---
+---
 
 ## Repository Structure
 
-```
+```text
 campaign-revenue-analytics/
 │
 ├── data/
@@ -236,14 +245,14 @@ campaign-revenue-analytics/
 ├── sql/                      # PostgreSQL queries: KPIs, Pareto, segmentation
 │
 ├── tableau/                  # Tableau workbook file
-│    └── campaign\_revenue\_dashboard.twb
+│   └── campaign_revenue_dashboard.twb
 │
 ├── images/                   # Visualization exports used in README
 │
 └── README.md
 ```
 
-\---
+---
 
 *Built as a portfolio analytics project demonstrating end-to-end workflow: data validation → SQL analytical layer → revenue concentration analysis → strategic segmentation → Tableau dashboard.*
 
