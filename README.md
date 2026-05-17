@@ -6,7 +6,7 @@ A campaign-level analytics case built from real Facebook Ads data, evaluating ho
 
 - 3,155 validated records analyzed
 - 591 unique campaign entities
-- 20–30% of campaigns generated approximately 80% of observed LTV
+- Top ~40% of campaigns account for approximately 80% of observed LTV
 - Only 4 campaigns classified as Scale candidates
 - Top-value campaigns showed 90–100% late LTV share
 
@@ -96,7 +96,7 @@ Standardized naming conventions, removed 9 duplicate records, validated reportin
 Built PostgreSQL import workflow, KPI calculation layer, campaign ranking logic, Pareto analysis, and campaign segmentation model.
 
 **3. Revenue Concentration Analysis**  
-Ranked campaigns by total LTV contribution, calculated cumulative revenue share, and evaluated Pareto-like concentration behavior across the portfolio.
+Ranked campaigns by total LTV contribution, calculated cumulative revenue share, and evaluated revenue concentration across the portfolio.
 
 **4. Delayed Monetization Analysis**  
 Identified campaigns driven by delayed payment and delayed LTV behavior, compared immediate vs. delayed value generation, and evaluated timing patterns across high-value campaigns.
@@ -118,7 +118,8 @@ The Tableau Public dashboard integrates four analytical views into a single busi
 
 ![Campaign Revenue Concentration](Images/pareto_campaign_revenue.png)
 
-Campaigns were ranked by total observed LTV contribution, and cumulative revenue share was plotted to reveal concentration structure. The curve shows a Pareto-like distribution: **approximately 20–30% of campaigns generate around 80% of total observed LTV.** Revenue generation is structurally concentrated, not evenly distributed across the portfolio.
+Campaigns were ranked by total observed LTV contribution, and cumulative revenue share was plotted to reveal concentration structure. The curve shows a power-law concentration pattern: **the top ~40% of campaigns account for approximately 80% of total observed LTV**, while the bottom 60% 
+collectively contribute less than 20%.
 
 This implies that prioritization efforts should focus on identifying and validating a small number of high-performing structures rather than optimizing the portfolio uniformly.
 
@@ -150,7 +151,7 @@ Most campaigns cluster in low-value zones. A smaller subset enters the Scale and
 | 🔵 Optimize | 35 |
 | 🟢 Scale | 4 |
 
-**465 campaigns** fall into the Cut tier, the largest segment by count and a source of operational noise in the portfolio. Only **4 campaigns** reach Scale-level classification. This distribution is consistent with the concentration behavior identified in the Pareto analysis: a structurally small subset drives the meaningful share of observed business value.
+**465 campaigns** fall into the Cut tier, the largest segment by count and a source of operational noise in the portfolio. Only **4 campaigns** reach Scale-level classification. This distribution is consistent with the revenue concentration analysis: a smaller subset of campaigns drives a disproportionate share of observed business value.
 
 
 ### Delayed Monetization vs Value
