@@ -7,7 +7,7 @@ A campaign-level analytics case built from real Facebook Ads data, evaluating ho
 - 3,155 validated records analyzed
 - 591 unique campaign entities
 - Top ~40% of campaigns account for approximately 80% of observed LTV
-- Only 4 campaigns classified as Scale candidates
+- Only 4 campaigns classified as Scale candidates under the heuristic segmentation framework
 - Top-value campaigns showed 90–100% late LTV share
 
 
@@ -22,7 +22,7 @@ Interactive Tableau visualization:
 
 Paid acquisition campaigns differ not just in volume, but in the quality of monetization they produce. Raw payment counts can mask weak value generation, while lower-volume campaigns may deliver disproportionate LTV.
 
-This project addresses the need to move beyond surface-level performance metrics and build an analytical framework that answers: **which campaigns are worth scaling, optimizing, holding, or cutting, and why?**
+This project addresses the need to move beyond surface-level performance metrics and build an analytical framework that answers: **which campaigns should be prioritized for scaling validation, optimization, monitoring, or deprioritization, and why?**
 
 
 ## Dataset Overview
@@ -46,7 +46,7 @@ This project addresses the need to move beyond surface-level performance metrics
 - Identify revenue concentration patterns across the campaign portfolio
 - Classify campaigns by monetization efficiency and observed value quality
 - Detect campaigns with strong delayed LTV that would be misclassified by Day 0 metrics alone
-- Build a strategic segmentation framework for portfolio-level decision making
+- Build a heuristic segmentation framework for portfolio-level prioritization
 
 
 ## Tech Stack
@@ -129,18 +129,20 @@ This implies that prioritization efforts should focus on the stronger part of th
 
 ![Campaign Efficiency vs Value Matrix](Images/campaign_tier_matrix.png)
 
-Each campaign is plotted on two dimensions simultaneously: Monetization Efficiency on the X axis and Campaign LTV on the Y axis. Reference lines were selected from the observed distribution to separate the main campaign population from higher-value and higher-efficiency campaigns.
+Each campaign is plotted on two dimensions simultaneously: Monetization Efficiency on the X axis and Campaign LTV on the Y axis. Reference lines represent portfolio medians for both metrics, separating campaigns into above-median and below-median value and efficiency zones.
 
-The vertical threshold, around `26`, separates the main efficiency cluster from campaigns with stronger observed LTV per payment event. The horizontal threshold, around `480`, separates low-value campaigns from campaigns with a more meaningful total observed LTV contribution. These thresholds are dataset-specific operational benchmarks, not universal business standards.
+Median benchmarks are used instead of averages to reduce the influence of outliers. This creates a practical portfolio view for comparing campaign scale and monetization quality within the dataset.
 
-| Quadrant | Criteria | Action |
-| - | - | - |
-| **Scale** | High efficiency + high LTV | Prioritize for further validation and potential scaling |
-| **Optimize** | Lower efficiency but strong value opportunity | Improve monetization quality before scaling |
-| **Hold** | Higher efficiency but lower total LTV | Monitor for potential growth or further validation |
-| **Cut** | Low value + weak efficiency | Deprioritize or remove |
+| Zone | Interpretation |
+| - | - |
+| **High Value / High Efficiency** | Campaigns with above-median LTV and above-median monetization efficiency |
+| **High Value / Lower Efficiency** | Campaigns with above-median LTV but below-median monetization efficiency |
+| **Lower Value / High Efficiency** | Campaigns with below-median LTV but above-median monetization efficiency |
+| **Lower Value / Lower Efficiency** | Campaigns below the portfolio median on both dimensions |
 
-Most campaigns cluster in low-value zones. A smaller group enters the Scale and Optimize areas, confirming that raw payment volume alone is insufficient for prioritization decisions.
+These reference lines should not be interpreted as universal business thresholds. They are dataset-specific median benchmarks used to compare campaigns within this portfolio.
+
+Most campaigns cluster in lower-value zones, while a smaller group shows stronger value and efficiency characteristics. This confirms that raw payment volume alone is insufficient for prioritization decisions.
 
 
 ### Campaign Portfolio Distribution by Strategic Tier
@@ -154,10 +156,12 @@ Most campaigns cluster in low-value zones. A smaller group enters the Scale and 
 | 🔵 Optimize | 35 |
 | 🟢 Scale | 4 |
 
-**465 campaigns** fall into the Cut tier, the largest segment by count and a source of operational noise in the portfolio. Only **4 campaigns** reach Scale-level classification. This distribution is consistent with the revenue concentration analysis: a stronger subset of campaigns drives a disproportionate share of observed business value.
+Campaign tiers are based on heuristic operational thresholds applied to total observed LTV and monetization efficiency. These thresholds are used to create an exploratory action framework for portfolio prioritization and should not be interpreted as universal business standards.
+
+**465 campaigns** fall into the Cut tier, the largest segment by count and a source of operational noise in the portfolio. Only **4 campaigns** reach Scale-level classification under the heuristic segmentation logic. This distribution is consistent with the revenue concentration analysis: a stronger subset of campaigns drives a disproportionate share of observed business value.
 
 
-### Delayed Monetization vs Value
+### Late LTV Share vs Value
 
 ![Delayed Monetization vs Value](Images/delayed_monetization_vs_value.png)
 
@@ -187,6 +191,8 @@ Evaluating campaigns on Day 0 metrics alone would likely misclassify these as we
 
 ## Business Recommendations
 
+The recommendations below are directional and based on the heuristic segmentation framework. Since spend, CAC, ROAS, and margin data are unavailable, these actions should be interpreted as prioritization guidance rather than final budget decisions.
+
 **Scale**  
 Campaigns with high monetization efficiency, strong LTV, and significant late LTV share should be prioritized for further validation and potential scaling.
 
@@ -208,6 +214,7 @@ Campaigns with weak value generation and low efficiency should be deprioritized 
 - Single advertising account, so findings may not generalize across accounts or industries
 - Campaign scaling recommendations are directional because acquisition cost data is unavailable
 - LTV values are treated as monetary value units, but the dataset does not specify the underlying currency or whether LTV represents gross revenue, net revenue, or profit-adjusted value
+- Campaign tier thresholds are heuristic and dataset-specific; they should be validated with spend, CAC, ROAS, margin, and business targets before operational use
 
 
 ## Deliverables
