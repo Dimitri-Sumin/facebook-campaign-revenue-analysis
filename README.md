@@ -116,7 +116,7 @@ The Tableau Public dashboard integrates four analytical views into a single busi
 
 ### Campaign Revenue Concentration Analysis
 
-![Campaign Revenue Concentration](Images/pareto_campaign_revenue.png)
+![Campaign Revenue Concentration](Images/campaign_revenue.png)
 
 Campaigns were ranked by total observed LTV contribution, and cumulative revenue share was plotted to reveal concentration structure. The curve shows an uneven revenue concentration pattern: **the top ~40% of campaigns account for approximately 80% of total observed LTV**, while the remaining ~60% collectively contribute less than 20%.
 
@@ -226,7 +226,7 @@ campaign-revenue-analytics/
 │   ├── raw/                  # Original Facebook Ads export
 │   └── processed/            # Cleaned, deduplicated analytical dataset
 │
-├── sql/                      # PostgreSQL queries: KPIs, Pareto, segmentation
+├── sql/                      # PostgreSQL queries: KPIs, revenue concentration, segmentation
 │
 ├── tableau/                  # Tableau workbook file
 │   └── campaign_revenue_dashboard.twb
