@@ -4,7 +4,7 @@ A campaign-level analytics case built from real Facebook Ads data, evaluating ho
 
 ## Key Results
 
-- 3,155 validated records analyze
+- 3,155 validated records analyzed
 - 591 unique campaign entities
 - Top ~40% of campaigns account for approximately 80% of observed LTV
 - Only 4 campaigns classified as Scale candidates
@@ -84,7 +84,9 @@ This project addresses the need to move beyond surface-level performance metrics
 
 `monetization_efficiency` is expressed in absolute value terms, not as a percentage. For example, a value of `20` means that each payment event generated, on average, 20 units of observed LTV.
 
-Higher `monetization_efficiency` indicates stronger value generated per payment event. High payment volume with low efficiency may signal weak monetization quality. `monetization_efficiency` should not be interpreted as a standalone measure of campaign success. Since spend, CAC, ROAS, margin, and user-level retention data are unavailable, this metric is used as a proxy quality indicator. It helps compare how much observed LTV is generated per payment event, but campaign scaling decisions should be validated with acquisition cost data.
+Higher `monetization_efficiency` indicates stronger value generated per payment event. High payment volume with low efficiency may signal weaker monetization quality.
+
+`monetization_efficiency` should not be interpreted as a standalone measure of campaign success. Since spend, CAC, ROAS, margin, and user-level retention data are unavailable, this metric is used as a proxy quality indicator. It helps compare how much observed LTV is generated per payment event, but campaign scaling decisions should be validated with acquisition cost data.
 
 
 ## Project Workflow
@@ -109,7 +111,7 @@ Combined all analytical views into a single Tableau dashboard covering revenue c
 
 ![Tableau Dashboard](Images/tableau_dashboard.png)
 
-The Tableau Public dashboard integrates four analytical views into a single business decision layer: revenue concentration, monetization efficiency, delayed monetization behavior, and campaign strategic segmentation. It is designed for portfolio-level review and prioritization.
+The Tableau Public dashboard integrates four analytical views into a single business decision layer: revenue concentration, monetization efficiency, late LTV behavior, and campaign strategic segmentation. It is designed for portfolio-level review and prioritization.
 
 
 ## Visualization Analysis
@@ -127,16 +129,18 @@ This implies that prioritization efforts should focus on the stronger part of th
 
 ![Campaign Efficiency vs Value Matrix](Images/campaign_tier_matrix.png)
 
-Each campaign is plotted on two dimensions simultaneously: Monetization Efficiency on the X axis and Campaign LTV on the Y axis. This creates a four-quadrant strategic classification:
+Each campaign is plotted on two dimensions simultaneously: Monetization Efficiency on the X axis and Campaign LTV on the Y axis. Reference lines were selected from the observed distribution to separate the main campaign population from higher-value and higher-efficiency campaigns.
+
+The vertical threshold, around `26`, separates the main efficiency cluster from campaigns with stronger observed LTV per payment event. The horizontal threshold, around `480`, separates low-value campaigns from campaigns with a more meaningful total observed LTV contribution. These thresholds are dataset-specific operational benchmarks, not universal business standards.
 
 | Quadrant | Criteria | Action |
 | - | - | - |
 | **Scale** | High efficiency + high LTV | Prioritize for further validation and potential scaling |
 | **Optimize** | Lower efficiency but strong value opportunity | Improve monetization quality before scaling |
-| **Hold** | Stable moderate performance | Monitor, no immediate action |
+| **Hold** | Higher efficiency but lower total LTV | Monitor for potential growth or further validation |
 | **Cut** | Low value + weak efficiency | Deprioritize or remove |
 
-Most campaigns cluster in low-value zones. A smaller subset enters the Scale and Optimize quadrants, confirming that raw payment volume alone is insufficient for prioritization decisions.
+Most campaigns cluster in low-value zones. A smaller group enters the Scale and Optimize areas, confirming that raw payment volume alone is insufficient for prioritization decisions.
 
 
 ### Campaign Portfolio Distribution by Strategic Tier
@@ -150,7 +154,7 @@ Most campaigns cluster in low-value zones. A smaller subset enters the Scale and
 | 🔵 Optimize | 35 |
 | 🟢 Scale | 4 |
 
-**465 campaigns** fall into the Cut tier, the largest segment by count and a source of operational noise in the portfolio. Only **4 campaigns** reach Scale-level classification. This distribution is consistent with the revenue concentration analysis: a smaller subset of campaigns drives a disproportionate share of observed business value.
+**465 campaigns** fall into the Cut tier, the largest segment by count and a source of operational noise in the portfolio. Only **4 campaigns** reach Scale-level classification. This distribution is consistent with the revenue concentration analysis: a stronger subset of campaigns drives a disproportionate share of observed business value.
 
 
 ### Delayed Monetization vs Value
@@ -177,7 +181,7 @@ Evaluating campaigns on Day 0 metrics alone would likely misclassify these as we
 - **Late LTV dominates high-value behavior.** Top campaigns are heavily dependent on Day 3 and Day 7 value generation. Day 0 metrics systematically underestimate their value.
 - **Volume and value do not always align.** High payment volume does not necessarily imply high LTV per payment event. Monetization efficiency provides a better quality signal than payment count alone.
 - **Reporting window structure matters.** Treating Day 0, Day 3, and Day 7 as independent windows changed the interpretation of timing-based metrics.
-- **Only 4 campaigns qualify as Scale candidates** out of 591 unique campaign entities, reflecting the concentration of acquisition quality in a small subset of the portfolio.
+- **Only 4 campaigns qualify as Scale candidates** out of 591 unique campaign entities, reflecting the concentration of stronger monetization signals in a small subset of the portfolio.
 - **Creative reuse alone does not guarantee stable performance.** Reused creative structures should be evaluated independently through campaign-level value, efficiency, and timing metrics.
 
 
