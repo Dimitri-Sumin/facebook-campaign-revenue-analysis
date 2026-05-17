@@ -4,7 +4,7 @@ A campaign-level analytics case built from real Facebook Ads data, evaluating ho
 
 ## Key Results
 
-- 3,155 validated records analyzed
+- 3,155 validated records analyze
 - 591 unique campaign entities
 - Top ~40% of campaigns account for approximately 80% of observed LTV
 - Only 4 campaigns classified as Scale candidates
@@ -93,7 +93,7 @@ Higher `monetization_efficiency` indicates stronger value generated per payment 
 Standardized naming conventions, removed 9 duplicate records, validated reporting window structure, and performed exploratory pivot analysis in Excel.
 
 **2. SQL Analytical Layer**  
-Built PostgreSQL import workflow, KPI calculation layer, campaign ranking logic, Pareto analysis, and campaign segmentation model.
+Built PostgreSQL import workflow, KPI calculation layer, campaign ranking logic, revenue concentration analysis, and campaign segmentation model.
 
 **3. Revenue Concentration Analysis**  
 Ranked campaigns by total LTV contribution, calculated cumulative revenue share, and evaluated revenue concentration across the portfolio.
