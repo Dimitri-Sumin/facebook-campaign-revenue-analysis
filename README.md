@@ -174,7 +174,7 @@ Evaluating campaigns on Day 0 metrics alone would likely misclassify these as we
 ## Key Findings
 
 - **Revenue is unevenly distributed.** The top ~40% of campaigns account for approximately 80% of total observed LTV, while the rest form a long tail of lower-value campaigns.
-- - **Late LTV dominates high-value behavior.** Top campaigns are heavily dependent on Day 3 and Day 7 value generation. Day 0 metrics systematically underestimate their value.
+- **Late LTV dominates high-value behavior.** Top campaigns are heavily dependent on Day 3 and Day 7 value generation. Day 0 metrics systematically underestimate their value.
 - **Volume and value do not always align.** High payment volume does not necessarily imply high LTV per payment event. Monetization efficiency provides a better quality signal than payment count alone.
 - **Reporting window structure matters.** Treating Day 0, Day 3, and Day 7 as independent windows changed the interpretation of timing-based metrics.
 - **Only 4 campaigns qualify as Scale candidates** out of 591 unique campaign entities, reflecting the concentration of acquisition quality in a small subset of the portfolio.
@@ -210,7 +210,7 @@ Campaigns with weak value generation and low efficiency should be deprioritized 
 
 - ✅ Cleaned and validated dataset
 - ✅ PostgreSQL import workflow
-- ✅ SQL analytical queries covering KPIs, ranking, Pareto analysis, and segmentation
+- ✅ SQL analytical queries covering KPIs, ranking, revenue concentration analysis, and segmentation
 - ✅ Tableau interactive dashboard
 - ✅ Tableau Public visualization
 - ✅ Business recommendation framework
