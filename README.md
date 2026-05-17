@@ -53,7 +53,7 @@ This project addresses the need to move beyond surface-level performance metrics
 
 | Tool | Purpose |
 | - | - |
-| **PostgreSQL** | Data import, KPI layer, campaign ranking, Pareto analysis, segmentation |
+| **PostgreSQL** | Data import, KPI layer, campaign ranking, revenue concentration analysis, segmentation |
 | **Excel** | Data validation, duplicate removal, exploratory pivot analysis |
 | **Tableau Public** | Interactive dashboard and visualization layer |
 | **SQL** | Analytical queries, derived metrics, segmentation logic |
@@ -84,7 +84,7 @@ This project addresses the need to move beyond surface-level performance metrics
 
 `monetization_efficiency` is expressed in absolute value terms, not as a percentage. For example, a value of `20` means that each payment event generated, on average, 20 units of observed LTV.
 
-Higher `monetization_efficiency` indicates stronger value generated per payment event. High payment volume with low efficiency may signal weak monetization quality.
+Higher `monetization_efficiency` indicates stronger value generated per payment event. High payment volume with low efficiency may signal weak monetization quality. `monetization_efficiency` should not be interpreted as a standalone measure of campaign success. Since spend, CAC, ROAS, margin, and user-level retention data are unavailable, this metric is used as a proxy quality indicator. It helps compare how much observed LTV is generated per payment event, but campaign scaling decisions should be validated with acquisition cost data.
 
 
 ## Project Workflow
@@ -118,10 +118,9 @@ The Tableau Public dashboard integrates four analytical views into a single busi
 
 ![Campaign Revenue Concentration](Images/pareto_campaign_revenue.png)
 
-Campaigns were ranked by total observed LTV contribution, and cumulative revenue share was plotted to reveal concentration structure. The curve shows a power-law concentration pattern: **the top ~40% of campaigns account for approximately 80% of total observed LTV**, while the bottom 60% 
-collectively contribute less than 20%.
+Campaigns were ranked by total observed LTV contribution, and cumulative revenue share was plotted to reveal concentration structure. The curve shows an uneven revenue concentration pattern: **the top ~40% of campaigns account for approximately 80% of total observed LTV**, while the remaining ~60% collectively contribute less than 20%.
 
-This implies that prioritization efforts should focus on identifying and validating a small number of high-performing structures rather than optimizing the portfolio uniformly.
+This implies that prioritization efforts should focus on the stronger part of the campaign portfolio rather than treating all campaigns as equally valuable.
 
 
 ### Campaign Efficiency vs Value Matrix
@@ -174,8 +173,8 @@ Evaluating campaigns on Day 0 metrics alone would likely misclassify these as we
 
 ## Key Findings
 
-- **Revenue is structurally concentrated.** Approximately 20–30% of campaigns generate around 80% of total observed LTV. The portfolio contains a substantial long-tail campaign population.
-- **Delayed monetization dominates high-value behavior.** Top campaigns are heavily dependent on Day 3 and Day 7 value generation. Day 0 metrics systematically underestimate their value.
+- **Revenue is unevenly distributed.** The top ~40% of campaigns account for approximately 80% of total observed LTV, while the rest form a long tail of lower-value campaigns.
+- - **Late LTV dominates high-value behavior.** Top campaigns are heavily dependent on Day 3 and Day 7 value generation. Day 0 metrics systematically underestimate their value.
 - **Volume and value do not always align.** High payment volume does not necessarily imply high LTV per payment event. Monetization efficiency provides a better quality signal than payment count alone.
 - **Reporting window structure matters.** Treating Day 0, Day 3, and Day 7 as independent windows changed the interpretation of timing-based metrics.
 - **Only 4 campaigns qualify as Scale candidates** out of 591 unique campaign entities, reflecting the concentration of acquisition quality in a small subset of the portfolio.
@@ -185,7 +184,7 @@ Evaluating campaigns on Day 0 metrics alone would likely misclassify these as we
 ## Business Recommendations
 
 **Scale**  
-Campaigns with high monetization efficiency, strong LTV, and significant delayed value generation should be prioritized for further validation and potential scaling. Replicate and test the underlying creative, targeting, and campaign structures.
+Campaigns with high monetization efficiency, strong LTV, and significant late LTV share should be prioritized for further validation and potential scaling.
 
 **Optimize**  
 Campaigns with strong value opportunity but weaker monetization efficiency should be reviewed for quality bottlenecks. Improve monetization structure before increasing budget.
@@ -204,6 +203,7 @@ Campaigns with weak value generation and low efficiency should be deprioritized 
 - Reporting windows are limited to Day 0, Day 3, and Day 7
 - Single advertising account, so findings may not generalize across accounts or industries
 - Campaign scaling recommendations are directional because acquisition cost data is unavailable
+- LTV values are treated as monetary value units, but the dataset does not specify the underlying currency or whether LTV represents gross revenue, net revenue, or profit-adjusted value
 
 
 ## Deliverables
