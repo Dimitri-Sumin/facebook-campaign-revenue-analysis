@@ -2,6 +2,19 @@
 
 A campaign-level analytics case built from real Facebook Ads data, evaluating how paid acquisition translates into revenue and observed customer value across multiple monetization windows. The project identifies not only which campaigns generate conversions, but which acquisition sources produce stronger monetization quality, delayed revenue generation, and higher observed value per payment event.
 
+## Executive Summary
+
+This project evaluated campaign-level monetization behavior using Facebook Ads data across Day0, Day3, and Day7 reporting windows.
+
+The analysis revealed several non-obvious patterns:
+
+- High-value campaigns relied heavily on delayed monetization rather than immediate Day0 performance
+- Revenue generation was unevenly distributed across the portfolio
+- High payment volume did not always translate into stronger customer value
+- Only a very small subset of campaigns demonstrated strong value and monetization characteristics
+
+The findings suggest that campaign timing and monetization quality may be as important as conversion volume when evaluating acquisition performance.
+
 ## Key Results
 
 - 3,155 validated records analyzed
@@ -187,6 +200,74 @@ Evaluating campaigns on Day 0 metrics alone would likely misclassify these as we
 - **Reporting window structure matters.** Treating Day 0, Day 3, and Day 7 as independent windows changed the interpretation of timing-based metrics.
 - **Only 4 campaigns qualify as Scale candidates** out of 591 unique campaign entities, reflecting the concentration of stronger monetization signals in a small subset of the portfolio.
 - **Creative reuse alone does not guarantee stable performance.** Reused creative structures should be evaluated independently through campaign-level value, efficiency, and timing metrics.
+
+## Business Impact and Marketing Recommendations
+
+### Potential Revenue Leakage: Early Campaign Shutdown Risk
+
+Observation:
+
+Top campaigns demonstrated late LTV shares of 90–100%, meaning most observed value appeared after Day0.
+
+Risk:
+
+If campaign decisions rely primarily on same-day metrics, strong campaigns may be paused before their monetization cycle fully develops.
+
+Potential impact:
+
+High-value campaigns with delayed behavior could be systematically undervalued.
+
+Recommendation:
+
+Introduce Day3 or Day7 validation checkpoints before making pause decisions.
+
+---
+
+### Portfolio Focus Risk
+
+Observation:
+
+Revenue concentration analysis showed that approximately 40% of campaigns generated around 80% of observed LTV.
+
+Risk:
+
+Optimization efforts may be spread across a large number of lower-value campaigns.
+
+Recommendation:
+
+Prioritize analytical and optimization effort around Scale and Optimize segments rather than distributing attention evenly across the entire portfolio.
+
+---
+
+### Dependency on a Small Number of Strong Campaigns
+
+Observation:
+
+Only four campaigns qualified as Scale candidates.
+
+Risk:
+
+Portfolio performance may depend on a very small number of acquisition structures.
+
+Recommendation:
+
+Investigate creative patterns, targeting structures, and campaign configurations behind top-performing campaigns to identify potentially reproducible characteristics.
+
+---
+
+### Conversion Volume Does Not Equal Value
+
+Observation:
+
+Campaign payment volume and customer value did not consistently align.
+
+Risk:
+
+Optimization based purely on payment volume may prioritize weaker monetization sources.
+
+Recommendation:
+
+Include monetization efficiency and delayed LTV metrics alongside conversion reporting.
 
 
 ## Business Recommendations
