@@ -9,7 +9,7 @@ This project evaluated campaign-level monetization behavior using Facebook Ads d
 Three structural revenue risks were identified across the portfolio:
 
 - **Early shutdown risk** — campaigns with 90–100% late LTV share are systematically misclassified by Day 0 metrics and may be paused before their monetization cycle completes
-- **Portfolio diffusion** — the bottom 60% of campaigns by LTV generate approximately 20% of observed revenue while likely consuming a disproportionate share of budget and operational attention
+- **Portfolio diffusion** — the bottom 60% of campaigns by LTV generate approximately 20% of observed revenue while potentially requiring operational attention disproportionate to their observed value contribution
 - **Concentration dependency** — only 4 campaigns out of 591 qualify as Scale candidates, making portfolio performance vulnerable to a very small number of acquisition structures
 
 The analysis also revealed several non-obvious patterns:
@@ -74,7 +74,9 @@ If budget is distributed broadly across the portfolio rather than concentrated i
 - 60% of campaigns → ~20% of LTV
 - 40% of campaigns → ~80% of LTV
 
-Reallocating budget from the bottom 60% toward the top 40% could theoretically improve revenue yield per unit of spend by approximately **3x** — without increasing total budget. Even a partial reallocation toward the Scale and Optimize segments would likely produce a measurable revenue uplift.
+Under a simplified equal-distribution assumption, the stronger campaign segment appears substantially more value-dense than the long-tail portion of the portfolio.
+
+This suggests that portfolio prioritization may represent a meaningful optimization opportunity, although validation would require spend and CAC data.
 
 **Recommended fix:**
 
