@@ -1,99 +1,110 @@
 /*
+Project:
+Campaign Revenue Analytics
+
 Purpose:
-Export analytical views from PostgreSQL
-to CSV files for Tableau dashboards.
+Create a reusable campaign-level ranking view
+for Tableau export and performance comparison.
 
-Data flow:
+This view aggregates the analytical KPI layer
+from campaign_metrics to the campaign level.
 
-Raw data
-→ SQL transformations
-→ analytical views
-→ CSV export
-→ Tableau visualization
+It is used to compare campaigns by:
 
-Output folder:
+• total payment volume
+• total observed LTV
+• delayed LTV dependency
+• monetization efficiency
+• scale and quality combination
 
-Data/processed
+Questions:
+1. Which campaigns generate the highest total value?
+2. Which campaigns demonstrate strongest monetization efficiency?
+3. Which campaigns rely heavily on delayed LTV?
+4. Which campaigns combine scale and quality?
+
+Output:
+View name:
+campaign_ranking
+
+Fields:
+• campaign name
+• payment volume
+• total LTV
+• campaign-level late LTV share
+• monetization efficiency
+
+Notes:
+
+campaign_late_ltv_share is calculated at the
+campaign level as:
+
+late LTV across the campaign
+/
+total LTV across the campaign
+
+This avoids averaging row-level ratios and gives
+a cleaner campaign-level delayed revenue indicator.
 */
 
 
--- Export campaign Pareto dataset
+-- Create campaign-level ranking view for Tableau
 
-COPY (
 
-    SELECT *
-    FROM campaign_pareto
+CREATE OR REPLACE VIEW campaign_ranking AS
 
+WITH campaign_summary AS (
+
+    SELECT
+
+        campaign,
+
+        -- total payment volume by campaign
+
+        SUM(payments_total)
+            AS total_payments,
+
+
+        -- total observed revenue / LTV by campaign
+
+        ROUND(
+            SUM(ltv_total),
+            2
+        ) AS total_ltv,
+
+
+        -- campaign-level share of LTV generated after Day 0
+
+        ROUND(
+            SUM(ltv_3d + ltv_7d)
+            /
+            NULLIF(
+                SUM(ltv_total),
+                0
+            ),
+            4
+        ) AS campaign_late_ltv_share,
+
+
+        -- average observed LTV generated per payment event
+
+        ROUND(
+            SUM(ltv_total)
+            /
+            NULLIF(
+                SUM(payments_total),
+                0
+            ),
+            2
+        ) AS monetization_efficiency
+
+    FROM campaign_metrics
+
+    GROUP BY campaign
 )
 
-TO 'D:/Stuff/Analytics/Subscription model analytical pet-project/Campaign Revenue and Monetization Dynamics Analysis/Data/processed/campaign_pareto.csv'
+SELECT *
 
-DELIMITER ','
-CSV HEADER;
+FROM campaign_summary
 
-
-/*
-Additional exports will be added as analytical
-views are created:
-
-campaign_ranking.csv
-campaign_segmentation.csv
-creative_stability.csv
-campaign_creative_analysis.csv
-*/
-
--- Export campaign ranking dataset
-
-COPY (
-
-    SELECT *
-    FROM campaign_ranking
-
-)
-
-TO 'D:/Stuff/Analytics/Subscription model analytical pet-project/Campaign Revenue and Monetization Dynamics Analysis/Data/processed/campaign_ranking.csv'
-
-DELIMITER ','
-CSV HEADER;
-
--- Export campaign segmentation dataset
-
-COPY (
-
-    SELECT *
-    FROM campaign_segmentation
-
-)
-
-TO 'D:/Stuff/Analytics/Subscription model analytical pet-project/Campaign Revenue and Monetization Dynamics Analysis/Data/processed/campaign_segmentation.csv'
-
-DELIMITER ','
-CSV HEADER;
-
--- Export campaign creative analysis dataset
-
-COPY (
-
-    SELECT *
-    FROM campaign_creative_analysis
-
-)
-
-TO 'D:/Stuff/Analytics/Subscription model analytical pet-project/Campaign Revenue and Monetization Dynamics Analysis/Data/processed/campaign_creative_analysis.csv'
-
-DELIMITER ','
-CSV HEADER;
-
--- Export creative stability dataset
-
-COPY (
-
-    SELECT *
-    FROM creative_stability
-
-)
-
-TO 'D:/Stuff/Analytics/Subscription model analytical pet-project/Campaign Revenue and Monetization Dynamics Analysis/Data/processed/creative_stability.csv'
-
-DELIMITER ','
-CSV HEADER;
+ORDER BY total_ltv DESC;
